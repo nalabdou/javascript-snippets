@@ -12,8 +12,8 @@ elemToListen.addEventListener("keydown",(event)=> {
 })
 ```
 ## 🤝 Contributing
-see [contributors](https://github.com/nalabdou/Symfony-code-snippets/graphs/contributors)
-Contributions, issues and feature requests are welcome !<br />Feel free to check [issues page](https://github.com/nalabdou/Symfony-code-snippets/issues).
+see [contributors](https://github.com/nalabdou/javascript-snippets/graphs/contributors)
+Contributions, issues and feature requests are welcome !<br />Feel free to check [issues page](https://github.com/nalabdou/javascript-snippets/issues).
 
 ## Show your support
 
