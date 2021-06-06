@@ -1,0 +1,59 @@
+{
+	"name": "javascript-snippets",
+	"displayName": "javaScript Code Snippets",
+	"description": "This extension contains over 400 code snippets for JavaScript, supports JavaScript and html & php files",
+	"version": "1.0.0",
+	"icon": "icon.png",
+	"publisher": "nadim-vscode",
+	"author": {
+		"name": "Nadim Al Abdou",
+		"url": "https://nalabdou.com"
+	},
+	"homepage": "https://github.com/nalabdou/javascript-snippets/blob/master/README.md",
+	"license": "SEE LICENSE IN LICENSE",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nalabdou/javascript-snippets"
+	},
+	"bugs": "https://github.com/nalabdou/javascript-snippets/issues",
+	"engines": {
+		"vscode": "^1.45.0"
+	},
+	"qna": "marketplace",
+	"keywords": [
+		"javascript",
+		"js",
+		"js snippets",
+		"javascript snippets",
+		"javascript autocomplete",
+		"js autocomplete",
+		"javaScript"
+	],
+	"categories": [
+		"Snippets",
+		"Language Packs"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"galleryBanner": {
+		"color": "#353091",
+		"theme": "dark"
+	},
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/js-glob.code-snippets"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/js-glob.code-snippets"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/js-glob.code-snippets"
+			}
+		]
+	}
+}

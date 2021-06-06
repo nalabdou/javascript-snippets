@@ -1,0 +1,4984 @@
+{
+    " Do things after DOM has fully loaded": {
+        "prefix": [
+            "jsDocReady",
+            "documentReady",
+            "load"
+        ],
+        "body": [
+            "window.addEventListener('load',()=>",
+            "{",
+            "   $0",
+            "}"
+        ],
+        "description": "Do any things after DOM has fully loaded"
+    },
+    " listen to event : A CSS animation has aborted.": {
+        "prefix": [
+            "jsAnimationCancelEvent",
+            "animationCancelEvent"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"animationcancel\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A CSS animation has aborted."
+    },
+    " listen to event : A CSS animation has completed.": {
+        "prefix": [
+            "jsAnimationEndEvent",
+            "animationEndEvent"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"animationend\",(${2:e}) => ",
+            "{ ",
+            "  ${3:/* ... */} ",
+            "})"
+        ],
+        "description": "listen to event : A CSS animation has completed."
+    },
+    " listen to event : A CSS animation has started.": {
+        "prefix": [
+            "jsAnimationStartEvent",
+            "animationStartEvent"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"animationstart\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A CSS animation has started."
+    },
+    " listen to event : A CSS animation is repeated.": {
+        "prefix": [
+            "jsAnimationIterationEvent",
+            "animationIterationEvent"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"animationiteration\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A CSS animation is repeated."
+    },
+    " listen to event : A CSS transition has actually started (fired after any delay).": {
+        "prefix": [
+            "jsTransitionStartEvent",
+            "transitionStartEvent"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"transitionstart\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A CSS transition has actually started (fired after any delay)."
+    },
+    " listen to event : A CSS transition has been cancelled.": {
+        "prefix": [
+            "jsTransitionCancelEvent",
+            "transitionCancelEvent"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"transitioncancel\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A CSS transition has been cancelled."
+    },
+    " listen to event : A WebSocket connection has been closed.": {
+        "prefix": [
+            "jsCloseEvent",
+            "close"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"close\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A WebSocket connection has been closed."
+    },
+    " listen to event : A session history entry is being navigated to (in certain cases).": {
+        "prefix": [
+            "jsPopstateEvent",
+            "popstate"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"popstate\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A session history entry is being navigated to (in certain cases)."
+    },
+    " listen to event : A session history entry is being traversed from.": {
+        "prefix": [
+            "jsPagehideEvent",
+            "pagehide"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"pagehide\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A session history entry is being traversed from."
+    },
+    " listen to event : A session history entry is being traversed to.": {
+        "prefix": [
+            "jsPageshowEvent",
+            "pageshow"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"pageshow\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A session history entry is being traversed to."
+    },
+    " listen to event : Afterprint The print dialog is closed": {
+        "prefix": [
+            "jsAfterpPrintEvent",
+            "afterprint"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"afterprint\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : Afterprint The print dialog is closed"
+    },
+    " listen to event : Audioprocess The input buffer of a ScriptProcessorNode is ready to be processed.": {
+        "prefix": [
+            "jsAudioProcessEvent",
+            "audioprocess"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"audioprocess\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : Audioprocess The input buffer of a ScriptProcessorNode is ready to be processed."
+    },
+    " listen to event : The input event fires when the value of an <input>,<select>,or <textarea> element has been changed. ": {
+        "prefix": [
+            "jsOnInputEvent",
+            "oninput",
+            "input"
+        ],
+        "body": [
+            "${1:elemToListen}.oninput = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : The input event fires when the value of an <input>,<select>,or <textarea> element has been changed. "
+    },
+    " listen to event : beforeprint The print dialog is opened": {
+        "prefix": [
+            "jsOnBeforePrintEvent",
+            "onbeforeprint",
+            "beforeprint"
+        ],
+        "body": [
+            "${1:elemToListen}.onbeforeprint = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : beforeprint The print dialog is opened"
+    },
+    " listen to event : canplay The browser can play the media,but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.": {
+        "prefix": [
+            "jsOnCanPlayEvent",
+            "oncanplay"
+        ],
+        "body": [
+            "${1:elemToListen}.oncanplay = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : canplay The browser can play the media,but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content."
+    },
+    " listen to event : canplaythrough The browser estimates it can play the media up to its end without stopping for content buffering.": {
+        "prefix": [
+            "jsOnCanPlayThroughEvent",
+            "oncanplaythrough"
+        ],
+        "body": [
+            "${1:elemToListen}.oncanplaythrough = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : canplaythrough The browser estimates it can play the media up to its end without stopping for content buffering."
+    },
+    " listen to event : change using addEventListener": {
+        "prefix": [
+            "jsChangeEvent",
+            "change"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"change\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : change using addEventListener"
+    },
+    " listen to event : change using on": {
+        "prefix": [
+            "jsOnChangeEvent",
+            "onchange"
+        ],
+        "body": [
+            "${1:elemToListen}.onchange = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : change using on"
+    },
+    " listen to event : complete The rendering of an OfflineAudioContext is terminated.": {
+        "prefix": [
+            "jsOnCompleteEvent",
+            "oncomplete"
+        ],
+        "body": [
+            "${1:elemToListen}.oncomplete = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : complete The rendering of an OfflineAudioContext is terminated."
+    },
+    " listen to event : compositionend The composition of a passage of text has been completed or canceled.": {
+        "prefix": [
+            "jsOnCompositionEndEvent",
+            "oncompositionend"
+        ],
+        "body": [
+            "${1:elemToListen}.oncompositionend = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : compositionend The composition of a passage of text has been completed or canceled."
+    },
+    " listen to event : compositionstart The composition of a passage of text is prepared (similar to keydown for a keyboard input,but works with other inputs such as speech recognition).": {
+        "prefix": [
+            "jsOnCompositionStartEvent",
+            "oncompositionstart"
+        ],
+        "body": [
+            "${1:elemToListen}.oncompositionstart = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : compositionstart The composition of a passage of text is prepared (similar to keydown for a keyboard input,but works with other inputs such as speech recognition)."
+    },
+    " listen to event : compositionupdate A character is added to a passage of text being composed.": {
+        "prefix": [
+            "jsOnCompositionUpdateEvent",
+            "oncompositionupdate"
+        ],
+        "body": [
+            "${1:elemToListen}.oncompositionupdate = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : compositionupdate A character is added to a passage of text being composed."
+    },
+    " listen to event : contextmenu The right button of the mouse is clicked (before the context menu is displayed).": {
+        "prefix": [
+            "jsOnContextMenuEvent",
+            "oncontextmenu"
+        ],
+        "body": [
+            "${1:elemToListen}.oncontextmenu = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : contextmenu The right button of the mouse is clicked (before the context menu is displayed)."
+    },
+    " listen to event : copy The selection has been copied to the clipboard": {
+        "prefix": [
+            "jsOnCopyEvent",
+            "oncopy"
+        ],
+        "body": [
+            "${1:elemToListen}.oncopy = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : copy The selection has been copied to the clipboard"
+    },
+    " listen to event : cut The selection has been cut and copied to the clipboard": {
+        "prefix": [
+            "jsOnCutEvent",
+            "oncut"
+        ],
+        "body": [
+            "${1:elemToListen}.oncut = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : cut The selection has been cut and copied to the clipboard"
+    },
+    " listen to event : dblclick A pointing device button is clicked twice on an element.": {
+        "prefix": [
+            "jsOnDblClickEvent",
+            "ondblclick"
+        ],
+        "body": [
+            "${1:elemToListen}.ondblclick = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : dblclick A pointing device button is clicked twice on an element."
+    },
+    " listen to event : drag An element or text selection is being dragged. (Fired continuously every 350ms)": {
+        "prefix": [
+            "jsOnDragEvent",
+            "ondrag"
+        ],
+        "body": [
+            "${1:elemToListen}.ondrag = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : drag An element or text selection is being dragged. (Fired continuously every 350ms)"
+    },
+    " listen to event : dragend A drag operation is being ended (by releasing a mouse button or hitting the escape key).": {
+        "prefix": [
+            "jsOnDragEndEvent",
+            "ondragend"
+        ],
+        "body": [
+            "${1:elemToListen}.ondragend = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : dragend A drag operation is being ended (by releasing a mouse button or hitting the escape key)."
+    },
+    " listen to event : dragenter A dragged element or text selection enters a valid drop target.": {
+        "prefix": [
+            "jsOnDragEnterEvent",
+            "ondragenter"
+        ],
+        "body": [
+            "${1:elemToListen}.ondragenter = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : dragenter A dragged element or text selection enters a valid drop target."
+    },
+    " listen to event : dragleave A dragged element or text selection leaves a valid drop target.": {
+        "prefix": [
+            "jsOnDragLeaveEvent",
+            "ondragleave"
+        ],
+        "body": [
+            "${1:elemToListen}.ondragleave = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : dragleave A dragged element or text selection leaves a valid drop target."
+    },
+    " listen to event : dragover An element or text selection is being dragged over a valid drop target. (Fired continuously every 350ms)": {
+        "prefix": [
+            "jsOnDragOverEvent",
+            "ondragover"
+        ],
+        "body": [
+            "${1:elemToListen}.ondragover = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : dragover An element or text selection is being dragged over a valid drop target. (Fired continuously every 350ms)"
+    },
+    " listen to event : dragstart The user starts dragging an element or text selection.": {
+        "prefix": [
+            "jsOnDragStartEvent",
+            "ondragstart"
+        ],
+        "body": [
+            "${1:elemToListen}.ondragstart = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : dragstart The user starts dragging an element or text selection."
+    },
+    " listen to event : drop An element is dropped on a valid drop target.": {
+        "prefix": [
+            "jsOnDropEvent",
+            "ondrop"
+        ],
+        "body": [
+            "${1:elemToListen}.ondrop = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : drop An element is dropped on a valid drop target."
+    },
+    " listen to event : durationchange The duration attribute has been updated.": {
+        "prefix": [
+            "jsOnDurationChangeEvent",
+            "ondurationchange"
+        ],
+        "body": [
+            "${1:elemToListen}.ondurationchange = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : durationchange The duration attribute has been updated."
+    },
+    " listen to event : emptied The media has become empty for example,this event is sent if the media has already been loaded (or partially loaded),and the load() method is called to reload it.": {
+        "prefix": [
+            "jsOnEmptiedEvent",
+            "onemptied"
+        ],
+        "body": [
+            "${1:elemToListen}.onemptied = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : emptied The media has become empty for example,this event is sent if the media has already been loaded (or partially loaded),and the load() method is called to reload it."
+    },
+    " listen to event : ended Playback has stopped because the end of the media was reached.": {
+        "prefix": [
+            "jsOnEndedEvent",
+            "onended"
+        ],
+        "body": [
+            "${1:elemToListen}.onended = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : ended Playback has stopped because the end of the media was reached."
+    },
+    " listen to event : fullscreenchange An element was toggled to or from fullscreen mode.": {
+        "prefix": [
+            "jsOnFullScreenChangeEvent",
+            "onfullscreenchange"
+        ],
+        "body": [
+            "${1:elemToListen}.onfullscreenchange = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : fullscreenchange An element was toggled to or from fullscreen mode."
+    },
+    " listen to event : fullscreenerror It was impossible to switch to fullscreen mode for technical reasons or because the permission was denied.": {
+        "prefix": [
+            "jsOnFullScreenErrorEvent",
+            "onfullscreenerror"
+        ],
+        "body": [
+            "${1:elemToListen}.onfullscreenerror = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : fullscreenerror It was impossible to switch to fullscreen mode for technical reasons or because the permission was denied."
+    },
+    " listen to event : invalid A submittable element has been checked and doesn't satisfy its constraints.": {
+        "prefix": [
+            "jsOnInvalidEvent",
+            "oninvalid"
+        ],
+        "body": [
+            "${1:elemToListen}.oninvalid = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : invalid A submittable element has been checked and doesn't satisfy its constraints."
+    },
+    " listen to event : loadeddata The first frame of the media has finished loading.": {
+        "prefix": [
+            "jsOnLoadedDataEvent",
+            "onloadeddata"
+        ],
+        "body": [
+            "${1:elemToListen}.onloadeddata = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : loadeddata The first frame of the media has finished loading."
+    },
+    " listen to event : loadedmetadata The metadata has been loaded.": {
+        "prefix": [
+            "jsOnLoadedMetaDataEvent",
+            "onloadedmetadata"
+        ],
+        "body": [
+            "${1:elemToListen}.onloadedmetadata  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : loadedmetadata The metadata has been loaded."
+    },
+    " listen to event : loadstart Progress has begun.": {
+        "prefix": [
+            "jsOnLoadStartEvent",
+            "onloadstart"
+        ],
+        "body": [
+            "${1:elemToListen}.onloadstart = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : loadstart Progress has begun."
+    },
+    " listen to event : mousedown A pointing device button is pressed on an element.": {
+        "prefix": [
+            "jsOnMouseDownEvent",
+            "onmousedown"
+        ],
+        "body": [
+            "${1:elemToListen}.onmousedown = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : mousedown A pointing device button is pressed on an element."
+    },
+    " listen to event : mouseleave A pointing device is moved off the element that has the listener attached.": {
+        "prefix": [
+            "jsOnMouseLeaveEvent",
+            "onmouseleave"
+        ],
+        "body": [
+            "${1:elemToListen}.onmouseleave = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : mouseleave A pointing device is moved off the element that has the listener attached."
+    },
+    " listen to event : mousemove A pointing device is moved over an element. (Fired continously as the mouse moves.)": {
+        "prefix": [
+            "jsOnMouseMoveEvent",
+            "onmousemove"
+        ],
+        "body": [
+            "${1:elemToListen}.onmousemove = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : mousemove A pointing device is moved over an element. (Fired continously as the mouse moves.)"
+    },
+    " listen to event : mouseout A pointing device is moved off the element that has the listener attached or off one of its children.": {
+        "prefix": [
+            "jsOnMouseOutEvent",
+            "onmouseout"
+        ],
+        "body": [
+            "${1:elemToListen}.onmouseout = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : mouseout A pointing device is moved off the element that has the listener attached or off one of its children."
+    },
+    " listen to event : mouseover A pointing device is moved onto the element that has the listener attached or onto one of its children.": {
+        "prefix": [
+            "jsOnMouseOverEvent",
+            "onmouseover"
+        ],
+        "body": [
+            "${1:elemToListen}.onmouseover = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : mouseover A pointing device is moved onto the element that has the listener attached or onto one of its children."
+    },
+    " listen to event : mouseup A pointing device button is released over an element.": {
+        "prefix": [
+            "jsOnMouseUpEvent",
+            "onmouseup"
+        ],
+        "body": [
+            "${1:elemToListen}.onmouseup = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : mouseup A pointing device button is released over an element."
+    },
+    " listen to event : paste The item from the clipboard has been pasted": {
+        "prefix": [
+            "jsOnPasteEvent",
+            "onpaste"
+        ],
+        "body": [
+            "${1:elemToListen}.onpaste = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : paste The item from the clipboard has been pasted"
+    },
+    " listen to event : pause Playback has been paused.": {
+        "prefix": [
+            "jsOnPauseEvent",
+            "onpause"
+        ],
+        "body": [
+            "${1:elemToListen}.onpause = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pause Playback has been paused."
+    },
+    " listen to event : play Playback has begun.": {
+        "prefix": [
+            "jsOnPlayEvent",
+            "onplay"
+        ],
+        "body": [
+            "${1:elemToListen}.onplay = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : play Playback has begun."
+    },
+    " listen to event : playing Playback is ready to start after having been paused or delayed due to lack of data.": {
+        "prefix": [
+            "jsOnPlayingEvent",
+            "onplaying"
+        ],
+        "body": [
+            "${1:elemToListen}.onplaying = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : playing Playback is ready to start after having been paused or delayed due to lack of data."
+    },
+    " listen to event : pointercancel using addeventlistener ": {
+        "prefix": [
+            "jsPointerCancelEvent",
+            "pointercancel"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"pointercancel\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointercancel using addeventlistener "
+    },
+    " listen to event : pointercancel using on ": {
+        "prefix": [
+            "jsOnPointerCancelEvent",
+            "onpointercancel"
+        ],
+        "body": [
+            "${1:elemToListen}.onpointercancel = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointercancel using on "
+    },
+    " listen to event : pointerdown using addeventlistener ": {
+        "prefix": [
+            "jsPointerDownEvent",
+            "pointerdown"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"pointerdown\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointerdown using addeventlistener "
+    },
+    " listen to event : pointerdown using on ": {
+        "prefix": [
+            "jsOnPointerDownEvent",
+            "onpointerdown"
+        ],
+        "body": [
+            "${1:elemToListen}.onpointerdown = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointerdown using on "
+    },
+    " listen to event : pointerenter using addeventlistener ": {
+        "prefix": [
+            "jsPointerEnterEvent",
+            "pointerenter"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"pointerenter\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointerenter using addeventlistener "
+    },
+    " listen to event : pointerenter using on ": {
+        "prefix": [
+            "jsOnPointerEnterEvent",
+            "onpointerenter"
+        ],
+        "body": [
+            "${1:elemToListen}.onpointerenter = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointerenter using on "
+    },
+    " listen to event : pointerleave using addeventlistener ": {
+        "prefix": [
+            "jsPointerLeaveEvent",
+            "pointerleave"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"pointerleave\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointerleave using addeventlistener "
+    },
+    " listen to event : pointerleave using on ": {
+        "prefix": [
+            "jsOnPointerLeaveEvent",
+            "onpointerleave"
+        ],
+        "body": [
+            "${1:elemToListen}.onpointerleave = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointerleave using on "
+    },
+    " listen to event : pointerlockchange The pointer was locked or released.": {
+        "prefix": [
+            "jsOnPointerLockChangeEvent",
+            "onpointerlockchange"
+        ],
+        "body": [
+            "${1:elemToListen}.onpointerlockchange = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointerlockchange The pointer was locked or released."
+    },
+    " listen to event : pointerlockerror It was impossible to lock the pointer for technical reasons or because the permission was denied.": {
+        "prefix": [
+            "jsOnPointerLockErrorEvent",
+            "onpointerlockerror"
+        ],
+        "body": [
+            "${1:elemToListen}.onpointerlockerror = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointerlockerror It was impossible to lock the pointer for technical reasons or because the permission was denied."
+    },
+    " listen to event : pointermove using addeventlistener ": {
+        "prefix": [
+            "jsPointerMoveEvent",
+            "pointermove"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"pointermove\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointermove using addeventlistener "
+    },
+    " listen to event : pointermove using on ": {
+        "prefix": [
+            "jsOnPointerMoveEvent",
+            "onpointermove"
+        ],
+        "body": [
+            "${1:elemToListen}.onpointermove = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointermove using on "
+    },
+    " listen to event : pointerout using addeventlistener ": {
+        "prefix": [
+            "jsPointerOutEvent",
+            "pointerout"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"pointerout\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointerout using addeventlistener "
+    },
+    " listen to event : pointerout using on ": {
+        "prefix": [
+            "jsOnPointerOutEvent",
+            "onpointerout"
+        ],
+        "body": [
+            "${1:elemToListen}.onpointerout = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointerout using on "
+    },
+    " listen to event : pointeroverusing addeventlistener ": {
+        "prefix": [
+            "jsPointerOverEvent",
+            "pointerover"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"pointerover\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointeroverusing addeventlistener "
+    },
+    " listen to event : pointeroverusing on ": {
+        "prefix": [
+            "jsOnPointerOverEvent",
+            "onpointerover"
+        ],
+        "body": [
+            "${1:elemToListen}.onpointerover = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointeroverusing on "
+    },
+    " listen to event : pointerup using addeventlistener ": {
+        "prefix": [
+            "jsPointerUpEvent",
+            "pointerup"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"pointerup\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointerup using addeventlistener "
+    },
+    " listen to event : pointerup using on ": {
+        "prefix": [
+            "jsOnPointerUpEvent",
+            "onpointerup"
+        ],
+        "body": [
+            "${1:elemToListen}.onpointerup = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointerup using on "
+    },
+    " listen to event : progress In progress.": {
+        "prefix": [
+            "jsOnProgressEvent",
+            "onprogress"
+        ],
+        "body": [
+            "${1:elemToListen}.onprogress = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : progress In progress."
+    },
+    " listen to event : ratechange The playback rate has changed.": {
+        "prefix": [
+            "jsOnRateChangeEvent",
+            "onratechange"
+        ],
+        "body": [
+            "${1:elemToListen}.onratechange = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : ratechange The playback rate has changed."
+    },
+    " listen to event : readystatechange using addeventlistener ": {
+        "prefix": [
+            "jsReadyStateChangeEvent",
+            "readystatechange"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"readystatechange\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : readystatechange using addeventlistener "
+    },
+    " listen to event : readystatechange using on ": {
+        "prefix": [
+            "jsOnReadyStateChangeEvent",
+            "onreadystatechange"
+        ],
+        "body": [
+            "${1:elemToListen}.onreadystatechange = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : readystatechange using on "
+    },
+    " listen to event : reset The reset button is pressed": {
+        "prefix": [
+            "jsOnResetEvent",
+            "onreset"
+        ],
+        "body": [
+            "${1:elemToListen}.onreset = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : reset The reset button is pressed"
+    },
+    " listen to event : resize The document view has been resized.": {
+        "prefix": [
+            "jsOnResizeEvent",
+            "onresize"
+        ],
+        "body": [
+            "${1:elemToListen}.onresize = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : resize The document view has been resized."
+    },
+    " listen to event : scroll The document view or an element has been scrolled.": {
+        "prefix": [
+            "jsOnScrollEvent",
+            "onscroll"
+        ],
+        "body": [
+            "${1:elemToListen}.onscroll = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : scroll The document view or an element has been scrolled."
+    },
+    " listen to event : seeked A seek operation completed.": {
+        "prefix": [
+            "jsOnSeekedEvent",
+            "onseeked"
+        ],
+        "body": [
+            "${1:elemToListen}.onseeked = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : seeked A seek operation completed."
+    },
+    " listen to event : seeking A seek operation began.": {
+        "prefix": [
+            "jsOnSeekingEvent",
+            "onseeking"
+        ],
+        "body": [
+            "${1:elemToListen}.onseeking = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : seeking A seek operation began."
+    },
+    " listen to event : select Some text is being selected.": {
+        "prefix": [
+            "jsOnSelectEvent",
+            "onselect"
+        ],
+        "body": [
+            "${1:elemToListen}.onselect = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : select Some text is being selected."
+    },
+    " listen to event : stalled The user agent is trying to fetch media data,but data is unexpectedly not forthcoming.": {
+        "prefix": [
+            "jsOnStalledEvent",
+            "onstalled"
+        ],
+        "body": [
+            "${1:elemToListen}.onstalled = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : stalled The user agent is trying to fetch media data,but data is unexpectedly not forthcoming."
+    },
+    " listen to event : storage using addEventListener": {
+        "prefix": [
+            "jsStorageEvent",
+            "storage"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"storage\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : storage using addEventListener"
+    },
+    " listen to event : storage using on": {
+        "prefix": [
+            "jsOnStorageEvent",
+            "onstorage"
+        ],
+        "body": [
+            "${1:elemToListen}.onstorage = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : storage using on"
+    },
+    " listen to event : submit The submit button is pressed": {
+        "prefix": [
+            "jsOnSubmitEvent",
+            "onsubmit"
+        ],
+        "body": [
+            "${1:elemToListen}.onsubmit = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : submit The submit button is pressed"
+    },
+    " listen to event : suspend Media data loading has been suspended.": {
+        "prefix": [
+            "jsOnSuspendEvent",
+            "onsuspend"
+        ],
+        "body": [
+            "${1:elemToListen}.onsuspend = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : suspend Media data loading has been suspended."
+    },
+    " listen to event : timeout Progression is terminated due to preset time expiring.": {
+        "prefix": [
+            "jsOnTimeOutEvent",
+            "ontimeout"
+        ],
+        "body": [
+            "${1:elemToListen}.ontimeout  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : timeout Progression is terminated due to preset time expiring."
+    },
+    " listen to event : timeupdate The time indicated by the currentTime attribute has been updated.": {
+        "prefix": [
+            "jsOnTimeUpDateEvent",
+            "ontimeupdate"
+        ],
+        "body": [
+            "${1:elemToListen}.ontimeupdate = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : timeupdate The time indicated by the currentTime attribute has been updated."
+    },
+    " listen to event : touchcancel using addeventlistener ": {
+        "prefix": [
+            "jsTouchCancelEvent",
+            "touchcancel"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"touchcancel\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : touchcancel using addeventlistener "
+    },
+    " listen to event : touchcancel using on ": {
+        "prefix": [
+            "jsOnTouchCancelEvent",
+            "ontouchcancel"
+        ],
+        "body": [
+            "${1:elemToListen}.ontouchcancel = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : touchcancel using on "
+    },
+    " listen to event : touchend using addeventlistener ": {
+        "prefix": [
+            "jsTouchEndEvent",
+            "touchend"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"touchend\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : touchend using addeventlistener "
+    },
+    " listen to event : touchend using on ": {
+        "prefix": [
+            "jsOnTouchEndEvent",
+            "ontouchend"
+        ],
+        "body": [
+            "${1:elemToListen}.ontouchend = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : touchend using on "
+    },
+    " listen to event : touchmove using addeventlistener ": {
+        "prefix": [
+            "jsTouchMoveEvent",
+            "touchmove"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"touchmove\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : touchmove using addeventlistener "
+    },
+    " listen to event : touchmove using on ": {
+        "prefix": [
+            "jsOnTouchMoveEvent",
+            "ontouchmove"
+        ],
+        "body": [
+            "${1:elemToListen}.ontouchmove = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : touchmove using on "
+    },
+    " listen to event : touchstart using addeventlistener ": {
+        "prefix": [
+            "jsTouchStartEvent",
+            "touchstart"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"touchstart\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : touchstart using addeventlistener "
+    },
+    " listen to event : touchstart using on ": {
+        "prefix": [
+            "jsOnTouchStartEvent",
+            "ontouchstart"
+        ],
+        "body": [
+            "${1:elemToListen}.ontouchstart = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : touchstart using on "
+    },
+    " listen to event : transitionend A CSS transition has completed.": {
+        "prefix": [
+            "jsOnTransitionEndEvent",
+            "ontransitionend"
+        ],
+        "body": [
+            "${1:elemToListen}.ontransitionend = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : transitionend A CSS transition has completed."
+    },
+    " listen to event : transitionrun A CSS transition has begun running (fired before any delay starts).": {
+        "prefix": [
+            "jsOnTransitionRunEvent",
+            "ontransitionrun"
+        ],
+        "body": [
+            "${1:elemToListen}.ontransitionrun = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : transitionrun A CSS transition has begun running (fired before any delay starts)."
+    },
+    " listen to event : volumechange The volume has changed.": {
+        "prefix": [
+            "jsOnVolumeChangeEvent",
+            "onvolumechange"
+        ],
+        "body": [
+            "${1:elemToListen}.onvolumechange = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : volumechange The volume has changed."
+    },
+    " listen to event : waiting Playback has stopped because of a temporary lack of data.": {
+        "prefix": [
+            "jsOnWaitingEvent",
+            "onwaiting"
+        ],
+        "body": [
+            "${1:elemToListen}.onwaiting = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : waiting Playback has stopped because of a temporary lack of data."
+    },
+    " listen to event : wheel A wheel button of a pointing device is rotated in any direction.": {
+        "prefix": [
+            "jsOnWheelEvent",
+            "onwheel"
+        ],
+        "body": [
+            "${1:elemToListen}.onwheel = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : wheel A wheel button of a pointing device is rotated in any direction."
+    },
+    ".toExponential()": {
+        "prefix": [
+            "jsToExponential",
+            "toExponential"
+        ],
+        "body": [
+            "${1:valueNumber}.toExponential()"
+        ],
+        "description": ".toExponential()"
+    },
+    "=> function": {
+        "prefix": [
+            "jsFun",
+            "func",
+            "function"
+        ],
+        "body": [
+            "(${1:param1,param2}) => { ${2:statements }} "
+        ],
+        "description": "=> function"
+    },
+    "A class is a type of function,but instead of using the keyword function to initiate it,we use the keyword Class": {
+        "prefix": [
+            "jsClass",
+            "class"
+        ],
+        "body": [
+            "class ${1:ClassName}{  // Create a class",
+            "  constructor(${2:propertie}) {  // Class constructor",
+            "    this.${2:propertie}= ${2:propertie}  // Class body/properties",
+            "  }",
+            "}"
+        ],
+        "description": "A class is a type of function,but instead of using the keyword function to initiate it,we use the keyword Class"
+    },
+    "Create and dispatch Events": {
+        "prefix": [
+            "jsDispatchEvent",
+            "dispatchEvent"
+        ],
+        "body": [
+            "document.dispatchEvent(new Event(\"${1:event}\"))",
+            "document.querySelector(\"${2:selector}\").dispatchEvent(new Event(\"${1:event}\"))"
+        ],
+        "description": "Create and dispatch Events"
+    },
+    "Decode a URI after encoding it:": {
+        "prefix": [
+            "jsDecodeURI",
+            "decodeURI"
+        ],
+        "body": [
+            "decodeURI(${1:uri})"
+        ],
+        "description": "Decode a URI after encoding it:"
+    },
+    "Display an alert box:": {
+        "prefix": [
+            "jsAlert",
+            "alert"
+        ],
+        "body": [
+            "alert(\"${1:Message}\")"
+        ],
+        "description": "Display an alert box:"
+    },
+    "Display an confirm box:": {
+        "prefix": [
+            "jsConfirm",
+            "confirm"
+        ],
+        "body": [
+            "confirm(\"${1:confirm|message}\")"
+        ],
+        "description": "Display an confirm box:"
+    },
+    "Display an prompt box:": {
+        "prefix": [
+            "jsPrompt",
+            "prompt"
+        ],
+        "body": [
+            "prompt(\"${1:prompt|message}\",\"${2:wanted|value}\")"
+        ],
+        "description": "Display an prompt box:"
+    },
+    "Hide  an element by changing \"display\" to  none": {
+        "prefix": [
+            "jsHide",
+            "hide",
+            "d-none"
+        ],
+        "body": [
+            "${1:variable}.style.display = \"none\""
+        ],
+        "description": "Hide  an element by changing \"display\" to  none"
+    },
+    "IncludesString()": {
+        "prefix": [
+            "jsIncludesString",
+            "includes"
+        ],
+        "body": [
+            "${1:str}.includes(${2:value})"
+        ],
+        "description": "ncludesString"
+    },
+    "JSON.parse": {
+        "prefix": [
+            "jsJSONParse",
+            "parse"
+        ],
+        "body": [
+            "JSON.parse(${1:data})"
+        ],
+        "description": "JSON.parse"
+    },
+    "JSON.stringify": {
+        "prefix": [
+            "jsJSONStringify",
+            "stringify"
+        ],
+        "body": [
+            "JSON.stringify(${1:data})"
+        ],
+        "description": "JSON.stringify"
+    },
+    "JavaScript Array Array.from() Method": {
+        "prefix": [
+            "jsFrom",
+            "from"
+        ],
+        "body": [
+            "Array.from(${1:object},${2:mapFunction},${3:thisValue})"
+        ],
+        "description": "JavaScript Array Array.from() Method"
+    },
+    "JavaScript Array concat() Method": {
+        "prefix": [
+            "jsConcat",
+            "concat"
+        ],
+        "body": [
+            "${1:Array1}.concat(${1:Array2})"
+        ],
+        "description": "JavaScript Array concat() Method"
+    },
+    "JavaScript Array copyWithin() Method": {
+        "prefix": [
+            "jsCopyWithin",
+            "copyWithin"
+        ],
+        "body": [
+            "${1:Array}.copyWithin(${2:target},${3:start},${4:end})"
+        ],
+        "description": "JavaScript Array copyWithin() Method"
+    },
+    "JavaScript Array entries() Method": {
+        "prefix": [
+            "jsEntries",
+            "entries"
+        ],
+        "body": [
+            "${1:Array}.entries()${2:// returns an Array}"
+        ],
+        "description": "JavaScript Array entries() Method"
+    },
+    "JavaScript Array every() Method": {
+        "prefix": [
+            "jsEvery",
+            "every"
+        ],
+        "body": [
+            "${1:Array}.every(${2:Function})"
+        ],
+        "description": "JavaScript Array every() Method"
+    },
+    "JavaScript Array fill() Method": {
+        "prefix": [
+            "jsFill",
+            "fill"
+        ],
+        "body": [
+            "${1:Array}.fill(\"${2:value}\")"
+        ],
+        "description": "JavaScript Array fill() Method"
+    },
+    "JavaScript Array filter() Method": {
+        "prefix": [
+            "jsFilter",
+            "filter"
+        ],
+        "body": [
+            "${1:Array}.filter(${2:Function})"
+        ],
+        "description": "JavaScript Array filter() Method"
+    },
+    "JavaScript Array find() Method": {
+        "prefix": [
+            "jsFind",
+            "find"
+        ],
+        "body": [
+            "${1:Array}.find(${2:Function})"
+        ],
+        "description": "JavaScript Array find() Method"
+    },
+    "JavaScript Array findIndex() Method": {
+        "prefix": [
+            "jsFindIndex",
+            "findIndex"
+        ],
+        "body": [
+            "${1:Array}.findIndex(${2:Function})"
+        ],
+        "description": "JavaScript Array findIndex() Method"
+    },
+    "JavaScript Array includes() Method": {
+        "prefix": [
+            "jsIncludes",
+            "includes"
+        ],
+        "body": [
+            "${1:Array}.includes(${2:value},${3:start})"
+        ],
+        "description": "JavaScript Array includes() Method"
+    },
+    "JavaScript Array indexOf() Method": {
+        "prefix": [
+            "jsIndexOf",
+            "indexOf"
+        ],
+        "body": [
+            "${1:Array}.indexOf(${2:item},${3:start})"
+        ],
+        "description": "JavaScript Array indexOf() Method"
+    },
+    "JavaScript Array isArray() Method": {
+        "prefix": [
+            "jsIsArray",
+            "isArray"
+        ],
+        "body": [
+            "Array.isArray(${1:array})"
+        ],
+        "description": "JavaScript Array isArray() Method"
+    },
+    "JavaScript Array join() Method": {
+        "prefix": [
+            "jsJoin",
+            "join"
+        ],
+        "body": [
+            "${1:Array}.join()"
+        ],
+        "description": "JavaScript Array join() Method"
+    },
+    "JavaScript Array keys() Method": {
+        "prefix": [
+            "jsKeys",
+            "keys"
+        ],
+        "body": [
+            "${1:Array}.keys()"
+        ],
+        "description": "JavaScript Array keys() Method"
+    },
+    "JavaScript Array lastIndexOf() Method": {
+        "prefix": [
+            "jsLastIndexOf",
+            "lastIndexOf"
+        ],
+        "body": [
+            "${1:Array}.lastIndexOf(${2:item})"
+        ],
+        "description": "JavaScript Array lastIndexOf() Method"
+    },
+    "JavaScript Array map() Method": {
+        "prefix": [
+            "jsMap",
+            "map"
+        ],
+        "body": [
+            "${1:Array}.map(function())"
+        ],
+        "description": "JavaScript Array map() Method"
+    },
+    "JavaScript Array pop() Method": {
+        "prefix": [
+            "jsPop",
+            "pop"
+        ],
+        "body": [
+            "${1:Array}.pop()"
+        ],
+        "description": "JavaScript Array pop() Method"
+    },
+    "JavaScript Array push() Method": {
+        "prefix": [
+            "jsPush",
+            "push"
+        ],
+        "body": [
+            "${1:Array}.push(${2:item})"
+        ],
+        "description": "JavaScript Array push() Method"
+    },
+    "JavaScript Array reduce() Method": {
+        "prefix": [
+            "jsReduce",
+            "reduce"
+        ],
+        "body": [
+            "${1:Array}.reduce(function())"
+        ],
+        "description": "JavaScript Array reduce() Method"
+    },
+    "JavaScript Array reduceRight() Method": {
+        "prefix": [
+            "jsReduceRight",
+            "reduceRight"
+        ],
+        "body": [
+            "${1:Array}.reduceRight(function())"
+        ],
+        "description": "JavaScript Array reduceRight() Method"
+    },
+    "JavaScript Array reverse() Method": {
+        "prefix": [
+            "jsReverse",
+            "reverse"
+        ],
+        "body": [
+            "${1:Array}.reverse()"
+        ],
+        "description": "JavaScript Array reverse() Method"
+    },
+    "JavaScript Array shift() Method": {
+        "prefix": [
+            "jsShift",
+            "shift"
+        ],
+        "body": [
+            "${1:Array}.shift()"
+        ],
+        "description": "JavaScript Array shift() Method"
+    },
+    "JavaScript Array slice() Method": {
+        "prefix": [
+            "jsSlice",
+            "slice"
+        ],
+        "body": [
+            "${1:Array}.slice(${2:start},${3:end})"
+        ],
+        "description": "JavaScript Array slice() Method"
+    },
+    "JavaScript Array some() Method": {
+        "prefix": [
+            "jsSome",
+            "some"
+        ],
+        "body": [
+            "${1:Array}.some(function())"
+        ],
+        "description": "JavaScript Array some() Method"
+    },
+    "JavaScript Array sort() Method": {
+        "prefix": [
+            "jsSort",
+            "sort"
+        ],
+        "body": [
+            "${1:Array}.sort(function())"
+        ],
+        "description": "JavaScript Array sort() Method"
+    },
+    "JavaScript Array splice() Method": {
+        "prefix": [
+            "jsSplice",
+            "splice"
+        ],
+        "body": [
+            "${1:Array}.splice(${2:})"
+        ],
+        "description": "JavaScript Array splice() Method"
+    },
+    "JavaScript Array toString() Method": {
+        "prefix": [
+            "jsToString",
+            "toString"
+        ],
+        "body": [
+            "${1:Array}.toString()"
+        ],
+        "description": "JavaScript Array toString() Method"
+    },
+    "JavaScript Array unshift() Method": {
+        "prefix": [
+            "jsUnshift",
+            "unshift"
+        ],
+        "body": [
+            "${1:Array}.unshift(${2:item})"
+        ],
+        "description": "JavaScript Array unshift() Method"
+    },
+    "JavaScript Array valueOf() Method": {
+        "prefix": [
+            "jsValueOf",
+            "valueOf"
+        ],
+        "body": [
+            "${1:Array}.valueOf()"
+        ],
+        "description": "JavaScript Array valueOf() Method"
+    },
+    "Loops are handy,if you want to run the same code over and over again,each time with a different value.  Often this is the case when working with arrays:": {
+        "prefix": [
+            "jsFor",
+            "for"
+        ],
+        "body": [
+            "for (let ${1:index} = 0 ${1:index} < array.length ${1:index}++) {",
+            "    var ${1:variable} = array[${1:index}]",
+            "}"
+        ],
+        "description": "Loops are handy,if you want to run the same code over and over again,each time with a different value.  Often this is the case when working with arrays:"
+    },
+    "Math.E": {
+        "prefix": [
+            "jsE",
+            "E"
+        ],
+        "body": [
+            "Math.E"
+        ],
+        "description": "Math.E"
+    },
+    "Math.LN10": {
+        "prefix": [
+            "jsLn10",
+            "LN10"
+        ],
+        "body": [
+            "Math.LN10"
+        ],
+        "description": "Math.LN10"
+    },
+    "Math.LN2": {
+        "prefix": [
+            "jsLn2",
+            "LN2"
+        ],
+        "body": [
+            "Math.LN2"
+        ],
+        "description": "Math.LN2"
+    },
+    "Math.LOG10E": {
+        "prefix": [
+            "jsLog10e",
+            "LOG10E"
+        ],
+        "body": [
+            "Math.LOG10E"
+        ],
+        "description": "Math.LOG10E"
+    },
+    "Math.LOG2E": {
+        "prefix": [
+            "jsLog2e",
+            "LOG2E"
+        ],
+        "body": [
+            "Math.LOG2E"
+        ],
+        "description": "Math.LOG2E"
+    },
+    "Math.PI": {
+        "prefix": [
+            "jsPI",
+            "PI"
+        ],
+        "body": [
+            "Math.PI"
+        ],
+        "description": "Math.PI"
+    },
+    "Math.SQRT1_2": {
+        "prefix": [
+            "jsSqrt1_2",
+            "SQRT1_2"
+        ],
+        "body": [
+            "Math.SQRT1_2"
+        ],
+        "description": "Math.SQRT1_2"
+    },
+    "Math.SQRT2": {
+        "prefix": [
+            "jsSqrt2",
+            "SQRT2"
+        ],
+        "body": [
+            "Math.SQRT2"
+        ],
+        "description": "Math.SQRT2"
+    },
+    "Math.abs": {
+        "prefix": [
+            "jsAbs",
+            "abs"
+        ],
+        "body": [
+            "Math.abs(${1:value})"
+        ],
+        "description": "Math.abs"
+    },
+    "Math.acos": {
+        "prefix": [
+            "jsAcos",
+            "acos"
+        ],
+        "body": [
+            "Math.acos(${1:value})"
+        ],
+        "description": "Math.acos"
+    },
+    "Math.acosh": {
+        "prefix": [
+            "jsAcosh",
+            "acosh"
+        ],
+        "body": [
+            "Math.acosh(${1:value})"
+        ],
+        "description": "Math.acosh"
+    },
+    "Math.asin": {
+        "prefix": [
+            "jsAsin",
+            "asin"
+        ],
+        "body": [
+            "Math.asin(${1:value})"
+        ],
+        "description": "Math.asin"
+    },
+    "Math.asinh": {
+        "prefix": [
+            "jsAsinh",
+            "asinh"
+        ],
+        "body": [
+            "Math.asinh(${1:value})"
+        ],
+        "description": "Math.asinh"
+    },
+    "Math.atan": {
+        "prefix": [
+            "jsAtan",
+            "atan"
+        ],
+        "body": [
+            "Math.atan(${1:value})"
+        ],
+        "description": "Math.atan"
+    },
+    "Math.atan2": {
+        "prefix": [
+            "jsAtan2",
+            "atan2"
+        ],
+        "body": [
+            "Math.atan2(${1:value})"
+        ],
+        "description": "Math.atan2"
+    },
+    "Math.atanh": {
+        "prefix": [
+            "jsAtanh",
+            "atanh"
+        ],
+        "body": [
+            "Math.atanh(${1:value})"
+        ],
+        "description": "Math.atanh"
+    },
+    "Math.cbrt": {
+        "prefix": [
+            "jsCbrt",
+            "cbrt"
+        ],
+        "body": [
+            "Math.cbrt(${1:value})"
+        ],
+        "description": "Math.cbrt"
+    },
+    "Math.ceil": {
+        "prefix": [
+            "jsCeil",
+            "ceil"
+        ],
+        "body": [
+            "Math.ceil(${1:value})"
+        ],
+        "description": "Math.ceil"
+    },
+    "Math.cos": {
+        "prefix": [
+            "jsCos",
+            "cos"
+        ],
+        "body": [
+            "Math.cos(${1:value})"
+        ],
+        "description": "Math.cos"
+    },
+    "Math.cosh": {
+        "prefix": [
+            "jsCosh",
+            "cosh"
+        ],
+        "body": [
+            "Math.cosh(${1:value})"
+        ],
+        "description": "Math.cosh"
+    },
+    "Math.exp": {
+        "prefix": [
+            "jsExp",
+            "mexp"
+        ],
+        "body": [
+            "Math.exp(${1:value})"
+        ],
+        "description": "Math.exp"
+    },
+    "Math.floor": {
+        "prefix": [
+            "jsFloor",
+            "floor"
+        ],
+        "body": [
+            "Math.floor(${1:value})"
+        ],
+        "description": "Math.floor"
+    },
+    "Math.log": {
+        "prefix": [
+            "jsLogMath",
+            "mlog"
+        ],
+        "body": [
+            "Math.log(${1:value})"
+        ],
+        "description": "Math.log"
+    },
+    "Math.max": {
+        "prefix": [
+            "jsMax",
+            "max"
+        ],
+        "body": [
+            "Math.max(${1:numbers})"
+        ],
+        "description": "Math.max"
+    },
+    "Math.min": {
+        "prefix": [
+            "jsMin",
+            "min"
+        ],
+        "body": [
+            "Math.min(${1:numbers})"
+        ],
+        "description": "Math.min"
+    },
+    "Math.pow": {
+        "prefix": [
+            "jsPow",
+            "pow"
+        ],
+        "body": [
+            "Math.pow(${1:numbers})"
+        ],
+        "description": "Math.pow"
+    },
+    "Math.random()": {
+        "prefix": [
+            "jsRandom",
+            "random"
+        ],
+        "body": [
+            "Math.random()"
+        ],
+        "description": "Math.random()"
+    },
+    "Math.round": {
+        "prefix": [
+            "jsRound",
+            "round"
+        ],
+        "body": [
+            "Math.round(${1:value})"
+        ],
+        "description": "Math.round"
+    },
+    "Math.sin": {
+        "prefix": [
+            "jsSin",
+            "sin"
+        ],
+        "body": [
+            "Math.sin(${1:value})"
+        ],
+        "description": "Math.sin"
+    },
+    "Math.sqrt": {
+        "prefix": [
+            "jsSqrt",
+            "sqrt"
+        ],
+        "body": [
+            "Math.sqrt(${1:value})"
+        ],
+        "description": "Math.sqrt"
+    },
+    "Math.tan": {
+        "prefix": [
+            "jsTan",
+            "tan"
+        ],
+        "body": [
+            "Math.tan(${1:value})"
+        ],
+        "description": "Math.tan"
+    },
+    "Math.tanh": {
+        "prefix": [
+            "jsTanh",
+            "tanh"
+        ],
+        "body": [
+            "Math.tanh(${1:value})"
+        ],
+        "description": "Math.tanh"
+    },
+    "Math.trunc": {
+        "prefix": [
+            "jsTrunc",
+            "trunc"
+        ],
+        "body": [
+            "Math.trunc(${1:value})"
+        ],
+        "description": "Math.trunc"
+    },
+    "Number function": {
+        "prefix": [
+            "jsNumber",
+            "Number",
+            "number"
+        ],
+        "body": [
+            "Number(${1:value})"
+        ],
+        "description": "Number function"
+    },
+    "Number.MAX_VALUE": {
+        "prefix": [
+            "jsMAXVALUE",
+            "MAX_VALUE",
+            "maxv"
+        ],
+        "body": [
+            "Number.MAX_VALUE"
+        ],
+        "description": "Number.MAX_VALUE"
+    },
+    "Number.MIN_VALUE": {
+        "prefix": [
+            "jsMINVALUE",
+            "MIN_VALUE",
+            "min"
+        ],
+        "body": [
+            "Number.MIN_VALUE"
+        ],
+        "description": "Number.MIN_VALUE"
+    },
+    "Number.NEGATIVE_INFINITY": {
+        "prefix": [
+            "jsNEGATIVEINFINITY",
+            "NEGATIVE_INFINITY",
+            "negIn"
+        ],
+        "body": [
+            "Number.NEGATIVE_INFINITY"
+        ],
+        "description": "Number.NEGATIVE_INFINITY"
+    },
+    "Number.POSITIVE_INFINITY": {
+        "prefix": [
+            "jsPOSITIVEINFINITY",
+            "POSITIVE_INFINITY",
+            "posIn"
+        ],
+        "body": [
+            "Number.POSITIVE_INFINITY"
+        ],
+        "description": "Number.POSITIVE_INFINITY"
+    },
+    "Number.isSafeInteger": {
+        "prefix": [
+            "jsIsSafeInteger",
+            "isSafeInteger",
+            "safeInteger"
+        ],
+        "body": [
+            "Number.isSafeInteger(${1:value})"
+        ],
+        "description": "Number.isSafeInteger"
+    },
+    "Return the next element": {
+        "prefix": [
+            "jsNext",
+            "nextElementSibling",
+            "next"
+        ],
+        "body": [
+            "${1:varaible}.nextElementSibling"
+        ],
+        "description": "Return the next element"
+    },
+    "Return the parent element": {
+        "prefix": [
+            "jsParent",
+            "parentElement",
+            "parent"
+        ],
+        "body": [
+            "${1:varaible}.parentElement"
+        ],
+        "description": "Return the parent element"
+    },
+    "Return the previous element": {
+        "prefix": [
+            "jsPrevious",
+            "previousElementSibling",
+            "prev",
+            "previous"
+        ],
+        "body": [
+            "${1:varaible}.previousElementSibling"
+        ],
+        "description": "Return the previous element"
+    },
+    "String function": {
+        "prefix": [
+            "jsString",
+            "String"
+        ],
+        "body": [
+            "String(${1:value})"
+        ],
+        "description": "String function"
+    },
+    "String.fromCharCode()": {
+        "prefix": [
+            "jsFromCharCode",
+            "fromCharCode",
+            "fcc"
+        ],
+        "body": [
+            "String.fromCharCode(${1:code})"
+        ],
+        "description": "String.fromCharCode()"
+    },
+    "The Math object allows you to perform mathematical tasks.": {
+        "prefix": [
+            "jsMath",
+            "Math",
+            "math"
+        ],
+        "body": [
+            "Math.${1:op}"
+        ],
+        "description": "The Math object allows you to perform mathematical tasks."
+    },
+    "The for...in statement iterates over all enumerable properties of an object that are keyed by strings (ignoring ones keyed by Symbols),including inherited enumerable properties.": {
+        "prefix": [
+            "jsForIn",
+            "forIn",
+            "for in"
+        ],
+        "body": [
+            "for (const ${1:key} in ${2:object}) {",
+            "}"
+        ],
+        "description": "The for...in statement iterates over all enumerable properties of an object that are keyed by strings (ignoring ones keyed by Symbols),including inherited enumerable properties."
+    },
+    "The for...of statement creates a loop iterating over iterable objects,": {
+        "prefix": [
+            "jsForOf",
+            "forOf",
+            "for of"
+        ],
+        "body": [
+            "for (const ${1:iterator } of ${2:object}) {",
+            "    ${3:// code }",
+            "}"
+        ],
+        "description": "The for...of statement creates a loop iterating over iterable objects,"
+    },
+    "The forEach() method executes a provided function once for each array element.": {
+        "prefix": [
+            "jsForEach",
+            "forEach",
+            "loop"
+        ],
+        "body": [
+            "${1:array}.forEach(${2:element}=> { ",
+            "})"
+        ],
+        "description": "The forEach() method executes a provided function once for each array element."
+    },
+    "The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).": {
+        "prefix": [
+            "jsSetTimeInterval",
+            "setInterval"
+        ],
+        "body": [
+            "setInterval(() => {",
+            "// code",
+            "},${1:interval})"
+        ],
+        "description": "The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds)."
+    },
+    "The setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds.": {
+        "prefix": [
+            "jsSetTimeOut",
+            "setTimeout"
+        ],
+        "body": [
+            "setTimeout(() => {",
+            "// code ",
+            "},${1:delay})"
+        ],
+        "description": "The setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds."
+    },
+    "Use else if to specify a new condition to test,if the first condition is false": {
+        "prefix": [
+            "jsElseIf",
+            "elseIf",
+            "else if"
+        ],
+        "body": [
+            "else if (${1:conditions}) {",
+            "    ${1:// code}",
+            "}"
+        ],
+        "description": "Use else if to specify a new condition to test,if the first condition is false"
+    },
+    "Use else to specify a block of code to be executed,if the same condition is false": {
+        "prefix": [
+            "jsElse",
+            "else"
+        ],
+        "body": [
+            "else {",
+            "    ${1:// code}",
+            "}"
+        ],
+        "description": "Use else to specify a block of code to be executed,if the same condition is false"
+    },
+    "Use if to specify a block of code to be executed,if a specified condition is true": {
+        "prefix": [
+            "jsIf",
+            "if",
+            "cond"
+        ],
+        "body": [
+            "if (${1:conditions}) {",
+            "    ${1:// code}",
+            "}"
+        ],
+        "description": "Use if to specify a block of code to be executed,if a specified condition is true"
+    },
+    "Use the switch statement to select one of many code blocks to be executed.": {
+        "prefix": [
+            "jsSwitch",
+            "switch",
+            "case"
+        ],
+        "body": [
+            "switch(${1:expression}) {",
+            "  case ${2:x}:",
+            "    ${3:// code block}",
+            "    break",
+            "  default:",
+            "    ${4:// code block}",
+            "}"
+        ],
+        "description": "Use the switch statement to select one of many code blocks to be executed."
+    },
+    "add Class": {
+        "prefix": [
+            "jsAddClass",
+            "add",
+            "addClass"
+        ],
+        "body": [
+            "${1:variable}.classList.add('${2:classe}')"
+        ],
+        "description": "add Class"
+    },
+    "addEventListener.": {
+        "prefix": [
+            "jsEventListener",
+            "addEventListener",
+            "!addEventListener"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"${2:event}\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "addEventListener"
+    },
+    "ajax": {
+        "prefix": [
+            "jsAjax",
+            "ajax"
+        ],
+        "body": [
+            "let xhr = new XMLHttpRequest()",
+            "xhr.onreadystatechange = function () {",
+            "    if (this.readyState == 4 && this.status == 200) {",
+            "        ${1:// do your code}",
+            "    }",
+            "}",
+            "xhr.open('${2:GET}','${3:URL}',true)",
+            "xhr.send()",
+            ""
+        ],
+        "description": "ajax"
+    },
+    "appendChild": {
+        "prefix": [
+            "jsAppendChild",
+            "appendChild"
+        ],
+        "body": [
+            "${1:variable}.appendChild(${2:element})"
+        ],
+        "description": "appendChild"
+    },
+    "async function": {
+        "prefix": [
+            "jsAsyncFunction",
+            "async",
+            "!async"
+        ],
+        "body": [
+            "async function name(${1:parmas}) {",
+            "   ${2:statements}",
+            "}"
+        ],
+        "description": "async function"
+    },
+    "await function": {
+        "prefix": [
+            "jsAwait",
+            "await",
+            "!await"
+        ],
+        "body": [
+            "await ${1:functionName()}"
+        ],
+        "description": "await function"
+    },
+    "checking if an element has a class": {
+        "prefix": [
+            "jsHasClass",
+            "contains",
+            "containsClass"
+        ],
+        "body": [
+            "${1:variable}.classList.contains(\"${2:class}\")"
+        ],
+        "description": "checking if an element has a class"
+    },
+    "children": {
+        "prefix": [
+            "jsChildren",
+            "children",
+            "childrens"
+        ],
+        "body": [
+            "${1:element}.children"
+        ],
+        "description": "children"
+    },
+    "console log": {
+        "prefix": [
+            "jsLog",
+            "log",
+            "console"
+        ],
+        "body": [
+            "console.log(${1:log})"
+        ],
+        "description": "console logging"
+    },
+    "createElement ": {
+        "prefix": [
+            "jsCreateElement",
+            "createElement",
+            "celem"
+        ],
+        "body": [
+            "document.createElement(\"${1:element}\")"
+        ],
+        "description": "createElement "
+    },
+    "date .getAttribute()": {
+        "prefix": [
+            "jsGetAttr",
+            "getAttribute",
+            "getAttr"
+        ],
+        "body": [
+            "${1:variable}.getAttribute(${2:attr})"
+        ],
+        "description": "date .getAttribute()"
+    },
+    "date .getFullYear()": {
+        "prefix": [
+            "jsGetFullYear",
+            "getFullYear"
+        ],
+        "body": [
+            "${Date}.getFullYear()"
+        ],
+        "description": "date .getFullYear()"
+    },
+    "date .getHours()": {
+        "prefix": [
+            "jsGetHours",
+            "getHours"
+        ],
+        "body": [
+            "${Date}.getHours()"
+        ],
+        "description": "date .getHours()"
+    },
+    "date .getMilliseconds()": {
+        "prefix": [
+            "jsGetMilli",
+            "getMilliseconds"
+        ],
+        "body": [
+            "${Date}.getMilliseconds()"
+        ],
+        "description": "date .getMilliseconds()"
+    },
+    "date .getMinutes()": {
+        "prefix": [
+            "jsGetMin",
+            "getMinutes"
+        ],
+        "body": [
+            "${Date}.getMinutes()"
+        ],
+        "description": "date .getMinutes()"
+    },
+    "date .getMonth()": {
+        "prefix": [
+            "jsGetMonth",
+            "getMonth"
+        ],
+        "body": [
+            "${Date}.getMonth()"
+        ],
+        "description": "date .getMonth()"
+    },
+    "date .getSeconds()": {
+        "prefix": [
+            "jsGetSec",
+            "getSeconds"
+        ],
+        "body": [
+            "${Date}.getSeconds()"
+        ],
+        "description": "date .getSeconds()"
+    },
+    "date .getTime()": {
+        "prefix": [
+            "jsGetTime",
+            "getTime"
+        ],
+        "body": [
+            "${Date}.getTime()"
+        ],
+        "description": "date .getTime()"
+    },
+    "date .setAttribute()": {
+        "prefix": [
+            "jsSetAttr",
+            "setAttribute",
+            "attr"
+        ],
+        "body": [
+            "${1:variable}.setAttribute(${2:attr})"
+        ],
+        "description": "date .setAttribute()"
+    },
+    "date getDate()": {
+        "prefix": [
+            "jsGetDate",
+            "getDate"
+        ],
+        "body": [
+            "${Date}.getDate()"
+        ],
+        "description": "date getDate()"
+    },
+    "date getDay()": {
+        "prefix": [
+            "jsGetDay",
+            "getDay"
+        ],
+        "body": [
+            "${Date}.getDay()"
+        ],
+        "description": "date getDay()"
+    },
+    "date utc": {
+        "prefix": [
+            "jsDateUtc",
+            "dateUtc"
+        ],
+        "body": [
+            "Date.UTC()"
+        ],
+        "description": "date utc"
+    },
+    "date": {
+        "prefix": [
+            "jsDate",
+            "now",
+            "dateNow"
+        ],
+        "body": [
+            "Date.now()"
+        ],
+        "description": "date"
+    },
+    "declare variable javascript with const and getElementById": {
+        "prefix": [
+            "jsvConstId",
+            "getElementById",
+            "const"
+        ],
+        "body": [
+            "const ${1:variabel}= document.getElementById(\"${2:id}\")"
+        ],
+        "description": "declare variable javascript with let and getElementById"
+    },
+    "declare variable javascript with const and queryselector": {
+        "prefix": [
+            "jsVConst",
+            "let",
+            "querySelector"
+        ],
+        "body": [
+            "let ${1:variabel}= document.querySelector(\".${2:htmlSelector}\")"
+        ],
+        "description": "declare variable javascript with let and queryselector"
+    },
+    "declare variable javascript with const and queryselectorAll": {
+        "prefix": [
+            "jsVConstAll",
+            "querySelectorAll",
+            "qsa"
+        ],
+        "body": [
+            "let ${1:variabel}= document.querySelectorAll(\".${2:htmlSelector}\")"
+        ],
+        "description": "declare variable javascript with let and queryselectorAll"
+    },
+    "declare variable javascript with let and getElementById": {
+        "prefix": [
+            "jsVLetId",
+            "getElementById",
+        ],
+        "body": [
+            "let ${1:variabel}= document.getElementById(\"${2:id}\")"
+        ],
+        "description": "declare variable javascript with let and getElementById"
+    },
+    "declare variable javascript with let and queryselector": {
+        "prefix": [
+            "jsVLet",
+            "querySelector",
+            "qs",
+            "!qs"
+        ],
+        "body": [
+            "let ${1:variabel}= document.querySelector(\".${2:htmlSelector}\")"
+        ],
+        "description": "declare variable javascript with let and queryselector"
+    },
+    "declare variable javascript with let and queryselectorAll": {
+        "prefix": [
+            "jsVLetAll",
+            "querySelectorAll",
+            "qsa"
+        ],
+        "body": [
+            "let ${1:variabel}= document.querySelectorAll(\".${2:htmlSelector}\")"
+        ],
+        "description": "declare variable javascript with let and queryselectorAll"
+    },
+    "declare variable javascript with var and getElementById()": {
+        "prefix": [
+            "jsVid",
+            "getElementById",
+            "getId"
+        ],
+        "body": [
+            "var ${1:variabel}= document.getElementById(\"${2:id}\")"
+        ],
+        "description": "declare variable javascript with var and queryselectorAll"
+    },
+    "declare variable javascript with var and queryselector": {
+        "prefix": [
+            "jsVq",
+            "querySelector",
+            "qs",
+            "!qs"
+        ],
+        "body": [
+            "var ${1:variabel}= document.querySelector(\".${2:htmlSelector}\")"
+        ],
+        "description": [
+            "declare variable javascript with var and queryselector \r",
+            "Example in JQuery :  $('.htmlSelector') "
+        ]
+    },
+    "declare variable javascript with var and queryselectorAll": {
+        "prefix": [
+            "jsVqAll",
+            "querySelectorAll",
+            "qsa",
+            "!qsa"
+        ],
+        "body": [
+            "var ${1:variabel}= document.querySelectorAll(\".${2:htmlSelector}\")"
+        ],
+        "description": "declare variable javascript with var and queryselectorAll"
+    },
+    "decodeURIComponent": {
+        "prefix": [
+            "jsDecodeUriComponent",
+            "decodeURIComponent",
+            "!decodeURIComponent"
+        ],
+        "body": [
+            "decodeURIComponent(${1:uri})",
+            ""
+        ],
+        "description": "decodeURIComponent"
+    },
+    "do...while function": {
+        "prefix": [
+            "jsDoWhile",
+            "dw",
+            "dowhile",
+            "!dw"
+        ],
+        "body": [
+            "do {",
+            "  ${1:i = i + 1",
+            "  result = result + i}",
+            "} while (${2:i < 5})"
+        ],
+        "description": "do...while function"
+    },
+    "encode a URI :": {
+        "prefix": [
+            "jsEncodeURI",
+            "encodeURI",
+            "!encodeURI"
+        ],
+        "body": [
+            "encodeURI(${1:uri})"
+        ],
+        "description": "Decode a URI after encoding it:"
+    },
+    "encodeURIComponent": {
+        "prefix": [
+            "jsEncodeUriComponent",
+            "encodeURIComponent",
+            "!encodeURIComponent"
+        ],
+        "body": [
+            "encodeURIComponent(${1:uri})"
+        ],
+        "description": "encodeURIComponent"
+    },
+    "eval function": {
+        "prefix": [
+            "jsEval",
+            "eval",
+            "!eval"
+        ],
+        "body": [
+            "eval(\"${1:string}\")",
+            ""
+        ],
+        "description": "eval function"
+    },
+    "export default ": {
+        "prefix": [
+            "jsExportDefault",
+            "dexport",
+            "dexp",
+            "!dexp"
+        ],
+        "body": [
+            "export default "
+        ],
+        "description": "export default "
+    },
+    "export": {
+        "prefix": [
+            "jsExport",
+            "export",
+            "!export",
+            "exp"
+        ],
+        "body": [
+            "export { ${1:export} }"
+        ],
+        "description": "export"
+    },
+    "for await": {
+        "prefix": [
+            "jsForAwait",
+            "forAwait"
+        ],
+        "body": [
+            "for await (${1:variable} of ${1:iterable}) {",
+            "  ${1:statement}",
+            "}"
+        ],
+        "description": "for await"
+    },
+    "getTimezoneOffset()": {
+        "prefix": [
+            "jsTimeZoneOffset",
+            "getTimezoneOffset",
+            "!getTimezoneOffset"
+        ],
+        "body": [
+            "Date().getTimezoneOffset()"
+        ],
+        "description": "getTimezoneOffset()"
+    },
+    "getter": {
+        "prefix": [
+            "jsGetter",
+            "get",
+            "getter",
+            "!get"
+        ],
+        "body": [
+            "get ${1:wantedElem}() {",
+            "",
+            "}"
+        ],
+        "description": "getter"
+    },
+    "import": {
+        "prefix": [
+            "jsImport",
+            "import",
+            "imp",
+            "!imp"
+        ],
+        "body": [
+            "import { ${1:import} } from '${2:source}'"
+        ],
+        "description": "import"
+    },
+    "isFinitefunction": {
+        "prefix": [
+            "jsIsFinite",
+            "isFinite",
+            "!isFinite"
+        ],
+        "body": [
+            "isFinite(${1:value})"
+        ],
+        "description": "isFinitefunction"
+    },
+    "isNaN function": {
+        "prefix": [
+            "jsIsNAN",
+            "isNaN",
+            "!isNaN"
+        ],
+        "body": [
+            "isNaN(${1:value})"
+        ],
+        "description": "isNaN function"
+    },
+    "length": {
+        "prefix": [
+            "jsLength",
+            "length",
+            "!length"
+        ],
+        "body": [
+            ".length"
+        ],
+        "description": "length"
+    },
+    "listen to abort using .addEventListener": {
+        "prefix": [
+            "jsAbortEvent",
+            "abort",
+            "!abort"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"abort\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to abort using .addEventListener"
+    },
+    "listen to abort using .onabort": {
+        "prefix": [
+            "jsOnAbortEvent",
+            "onabort",
+            "!onabort"
+        ],
+        "body": [
+            "${1:elemToListen}.onabort  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to abort using .onabort"
+    },
+    "listen to auxclick using .addEventListener": {
+        "prefix": [
+            "jsAuxClickEvent",
+            "auxclick",
+            "!auxclick"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"auxclick\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to auxclick using .addEventListener"
+    },
+    "listen to beforeunload using .addEventListener": {
+        "prefix": [
+            "jsBeforeunloadEvent",
+            "beforeunload",
+            "!beforeunload"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"beforeunload\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to beforeunload using .addEventListener"
+    },
+    "listen to beforeunload using .onbeforeunload": {
+        "prefix": [
+            "jsOnBeforeunloadEvent",
+            "onbeforeunload",
+            "!onbeforeunload"
+        ],
+        "body": [
+            "${1:elemToListen}.onbeforeunload  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to beforeunload using .onbeforeunload"
+    },
+    "listen to blur using .addEventListener": {
+        "prefix": [
+            "jsBlurEvent",
+            "blur",
+            "!blur"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"blur\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to blur using .addEventListener"
+    },
+    "listen to blur using .onblur": {
+        "prefix": [
+            "jsOnBlurEvent",
+            "onblur",
+            "!onblur"
+        ],
+        "body": [
+            "${1:elemToListen}.onblur  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to blur using .onblur"
+    },
+    "listen to click using .addEventListener": {
+        "prefix": [
+            "jsClickEvent",
+            "click",
+            "!click"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"click\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to click using .addEventListener"
+    },
+    "listen to click using .onclick": {
+        "prefix": [
+            "jsOnClick",
+            "onclick",
+            "!onclick"
+        ],
+        "body": [
+            "${1:elemToListen}.onclick  = function(${2:e})",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to click using .onclick"
+    },
+    "listen to error using .addEventListener": {
+        "prefix": [
+            "jsErrorEvent",
+            "error",
+            "!error"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"error\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to error using .addEventListener"
+    },
+    "listen to error using .onerror": {
+        "prefix": [
+            "jsOnErrorEvent",
+            "onerror",
+            "!onerror"
+        ],
+        "body": [
+            "${1:elemToListen}.onerror  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to error using .onerror"
+    },
+    "listen to event : A CSS animation has aborted.": {
+        "prefix": [
+            "jsOnAnimationCancelEvent",
+            "onanimationcancel",
+            "!onanimationcancel"
+        ],
+        "body": [
+            "${1:elemToListen}.onanimationcancel = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A CSS animation has aborted."
+    },
+    "listen to event : A CSS animation has completed.": {
+        "prefix": [
+            "jsOnAnimationEndEvent",
+            "onanimationend",
+            "!onanimationend"
+        ],
+        "body": [
+            "${1:elemToListen}.onanimationend = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A CSS animation has completed."
+    },
+    "listen to event : A CSS animation has started.": {
+        "prefix": [
+            "jsOnAnimationStartEvent",
+            "onanimationstart",
+            "!onanimationstart"
+        ],
+        "body": [
+            "${1:elemToListen}.onanimationstart = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A CSS animation has started."
+    },
+    "listen to event : A CSS animation is repeated.": {
+        "prefix": [
+            "jsOnAnimationIterationEvent",
+            "onanimationiteration",
+            "!onanimationiteration"
+        ],
+        "body": [
+            "${1:elemToListen}.onanimationiteration = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A CSS animation is repeated."
+    },
+    "listen to event : A CSS transition has actually started (fired after any delay).": {
+        "prefix": [
+            "jsOnTransitionStartEvent",
+            "ontransitionstart",
+            "!ontransitionstart"
+        ],
+        "body": [
+            "${1:elemToListen}.ontransitionstart = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A CSS transition has actually started (fired after any delay)."
+    },
+    "listen to event : A CSS transition has been cancelled.": {
+        "prefix": [
+            "jsOnTransitionCancelEvent",
+            "ontransitioncancel",
+            "!ontransitioncancel"
+        ],
+        "body": [
+            "${1:elemToListen}.ontransitioncancel = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A CSS transition has been cancelled."
+    },
+    "listen to event : A WebSocket connection has been closed.": {
+        "prefix": [
+            "jsOnCloseEvent",
+            "onclose",
+            "!onclose"
+        ],
+        "body": [
+            "${1:elemToListen}.onclose  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A WebSocket connection has been closed."
+    },
+    "listen to event : A session history entry is being navigated to (in certain cases).": {
+        "prefix": [
+            "jsOnPopstateEvent",
+            "onpopstate",
+            "!onpopstate"
+        ],
+        "body": [
+            "${1:elemToListen}.onpopstate = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A session history entry is being navigated to (in certain cases)."
+    },
+    "listen to event : A session history entry is being traversed from.": {
+        "prefix": [
+            "jsOnPagehideEvent",
+            "onpagehide",
+            "!onpagehide"
+        ],
+        "body": [
+            "${1:elemToListen}.onpagehide  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A session history entry is being traversed from."
+    },
+    "listen to event : A session history entry is being traversed to.": {
+        "prefix": [
+            "jsOnPageshowEvent",
+            "onpageshow",
+            "!onpageshow"
+        ],
+        "body": [
+            "${1:elemToListen}.onpageshow = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : A session history entry is being traversed to."
+    },
+    "listen to event : Afterprint The print dialog is closed": {
+        "prefix": [
+            "jsOnAfterpPrintEvent",
+            "onafterprint",
+            "!onafterprint"
+        ],
+        "body": [
+            "${1:elemToListen}.onafterprint = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : Afterprint The print dialog is closed"
+    },
+    "listen to event : Audioprocess The input buffer of a ScriptProcessorNode is ready to be processed.": {
+        "prefix": [
+            "jsOnAudioProcessEvent",
+            "onaudioprocess",
+            "!onaudioprocess"
+        ],
+        "body": [
+            "${1:elemToListen}.onaudioprocess = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to event : Audioprocess The input buffer of a ScriptProcessorNode is ready to be processed."
+    },
+    "listen to event : The input event fires when the value of an <input>,<select>,or <textarea> element has been changed. ": {
+        "prefix": [
+            "jsInputEvent",
+            "input",
+            "!input"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"input\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : The input event fires when the value of an <input>,<select>,or <textarea> element has been changed. "
+    },
+    "listen to event : beforeprint The print dialog is opened": {
+        "prefix": [
+            "jsBeforePrintEvent",
+            "beforeprint",
+            "!beforeprint"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"beforeprint\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : beforeprint The print dialog is opened"
+    },
+    "listen to event : canplay The browser can play the media,but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.": {
+        "prefix": [
+            "jsCanPlayEvent",
+            "canplay",
+            "!canplay"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"canplay\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : canplay The browser can play the media,but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content."
+    },
+    "listen to event : canplaythrough The browser estimates it can play the media up to its end without stopping for content buffering.": {
+        "prefix": [
+            "jsCanPlayThroughEvent",
+            "canplaythrough",
+            "!canplaythrough"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"canplaythrough\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : canplaythrough The browser estimates it can play the media up to its end without stopping for content buffering."
+    },
+    "listen to event : complete The rendering of an OfflineAudioContext is terminated.": {
+        "prefix": [
+            "jsCompleteEvent",
+            "complete",
+            "!complete"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"complete\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : complete The rendering of an OfflineAudioContext is terminated."
+    },
+    "listen to event : compositionend The composition of a passage of text has been completed or canceled.": {
+        "prefix": [
+            "jsCompositionEndEvent",
+            "compositionend",
+            "!compositionend"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"compositionend\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : compositionend The composition of a passage of text has been completed or canceled."
+    },
+    "listen to event : compositionstart The composition of a passage of text is prepared (similar to keydown for a keyboard input,but works with other inputs such as speech recognition).": {
+        "prefix": [
+            "jsCompositionStartEvent",
+            "compositionstart",
+            "!compositionstart"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"compositionstart\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : compositionstart The composition of a passage of text is prepared (similar to keydown for a keyboard input,but works with other inputs such as speech recognition)."
+    },
+    "listen to event : compositionupdate A character is added to a passage of text being composed.": {
+        "prefix": [
+            "jsCompositionUpdateEvent",
+            "compositionupdate",
+            "!compositionupdate"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"compositionupdate\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : compositionupdate A character is added to a passage of text being composed."
+    },
+    "listen to event : contextmenu The right button of the mouse is clicked (before the context menu is displayed).": {
+        "prefix": [
+            "jsContextMenuEvent",
+            "contextmenu",
+            "!contextmenu"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"contextmenu\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : contextmenu The right button of the mouse is clicked (before the context menu is displayed)."
+    },
+    "listen to event : copy The selection has been copied to the clipboard": {
+        "prefix": [
+            "jsCopyEvent",
+            "copy",
+            "!copy"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"copy\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : copy The selection has been copied to the clipboard"
+    },
+    "listen to event : cut The selection has been cut and copied to the clipboard": {
+        "prefix": [
+            "jsCutEvent",
+            "cut",
+            "!cut"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"cut\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : cut The selection has been cut and copied to the clipboard"
+    },
+    "listen to event : dblclick A pointing device button is clicked twice on an element.": {
+        "prefix": [
+            "jsDblClickEvent",
+            "dblclick",
+            "!dblc"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"dblclick\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : dblclick A pointing device button is clicked twice on an element."
+    },
+    "listen to event : drag An element or text selection is being dragged. (Fired continuously every 350ms)": {
+        "prefix": [
+            "jsDragEvent",
+            "drag",
+            "!drag"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"drag\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : drag An element or text selection is being dragged. (Fired continuously every 350ms)"
+    },
+    "listen to event : dragend A drag operation is being ended (by releasing a mouse button or hitting the escape key).": {
+        "prefix": [
+            "jsDragEndEvent",
+            "dragend",
+            "!dragend"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"dragend\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : dragend A drag operation is being ended (by releasing a mouse button or hitting the escape key)."
+    },
+    "listen to event : dragenter A dragged element or text selection enters a valid drop target.": {
+        "prefix": [
+            "jsDragEnterEvent",
+            "dragenter",
+            "!dragenter"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"dragenter\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : dragenter A dragged element or text selection enters a valid drop target."
+    },
+    "listen to event : dragleave A dragged element or text selection leaves a valid drop target.": {
+        "prefix": [
+            "jsDragLeaveEvent",
+            "dragleave",
+            "!dragleave"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"dragleave\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : dragleave A dragged element or text selection leaves a valid drop target."
+    },
+    "listen to event : dragover An element or text selection is being dragged over a valid drop target. (Fired continuously every 350ms)": {
+        "prefix": [
+            "jsDragOverEvent",
+            "dragover",
+            "!dragover"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"dragover\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : dragover An element or text selection is being dragged over a valid drop target. (Fired continuously every 350ms)"
+    },
+    "listen to event : dragstart The user starts dragging an element or text selection.": {
+        "prefix": [
+            "jsDragStartEvent",
+            "dragstart",
+            "!dragstart"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"dragstart\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : dragstart The user starts dragging an element or text selection."
+    },
+    "listen to event : drop An element is dropped on a valid drop target.": {
+        "prefix": [
+            "jsDropEvent",
+            "drop",
+            "!drop"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"drop\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : drop An element is dropped on a valid drop target."
+    },
+    "listen to event : durationchange The duration attribute has been updated.": {
+        "prefix": [
+            "jsDurationChangeEvent",
+            "durationchange",
+            "!durationchange"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"durationchange\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : durationchange The duration attribute has been updated."
+    },
+    "listen to event : emptied The media has become empty for example,this event is sent if the media has already been loaded (or partially loaded),and the load() method is called to reload it.": {
+        "prefix": [
+            "jsEmptiedEvent",
+            "emptied",
+            "!emptied"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"emptied\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : emptied The media has become empty for example,this event is sent if the media has already been loaded (or partially loaded),and the load() method is called to reload it."
+    },
+    "listen to event : ended Playback has stopped because the end of the media was reached.": {
+        "prefix": [
+            "jsEndedEvent",
+            "ended",
+            "!ended"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"ended\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : ended Playback has stopped because the end of the media was reached."
+    },
+    "listen to event : fullscreenchange An element was toggled to or from fullscreen mode.": {
+        "prefix": [
+            "jsFullScreenChangeEvent",
+            "fullscreenchange",
+            "!fullscreenchange"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"fullscreenchange\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : fullscreenchange An element was toggled to or from fullscreen mode."
+    },
+    "listen to event : fullscreenerror It was impossible to switch to fullscreen mode for technical reasons or because the permission was denied.": {
+        "prefix": [
+            "jsFullScreenErrorEvent",
+            "fullscreenerror",
+            "!fullscreenerror"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"fullscreenerror\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : fullscreenerror It was impossible to switch to fullscreen mode for technical reasons or because the permission was denied."
+    },
+    "listen to event : invalid A submittable element has been checked and doesn't satisfy its constraints.": {
+        "prefix": [
+            "jsInvalidEvent",
+            "invalid",
+            "!invalid"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"invalid\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : invalid A submittable element has been checked and doesn't satisfy its constraints."
+    },
+    "listen to event : loadeddata The first frame of the media has finished loading.": {
+        "prefix": [
+            "jsLoadedDataEvent",
+            "loadeddata",
+            "!loadeddata"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"loadeddata\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : loadeddata The first frame of the media has finished loading."
+    },
+    "listen to event : loadedmetadata The metadata has been loaded.": {
+        "prefix": [
+            "jsLoadedMetaDataEvent",
+            "loadedmetadata",
+            "!loadedmetadata"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"loadedmetadata \",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : loadedmetadata The metadata has been loaded."
+    },
+    "listen to event : loadstart Progress has begun.": {
+        "prefix": [
+            "jsLoadStartEvent",
+            "loadstart",
+            "!loadstart"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"loadstart\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : loadstart Progress has begun."
+    },
+    "listen to event : mousedown A pointing device button is pressed on an element.": {
+        "prefix": [
+            "jsMouseDownEvent",
+            "mousedown",
+            "!mousedown"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"mousedown\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : mousedown A pointing device button is pressed on an element."
+    },
+    "listen to event : mouseleave A pointing device is moved off the element that has the listener attached.": {
+        "prefix": [
+            "jsMouseLeaveEvent",
+            "mouseleave",
+            "!mouseleave"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"mouseleave\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : mouseleave A pointing device is moved off the element that has the listener attached."
+    },
+    "listen to event : mousemove A pointing device is moved over an element. (Fired continously as the mouse moves.)": {
+        "prefix": [
+            "jsMouseMoveEvent",
+            "mousemove",
+            "!mousemove"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"mousemove\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : mousemove A pointing device is moved over an element. (Fired continously as the mouse moves.)"
+    },
+    "listen to event : mouseout A pointing device is moved off the element that has the listener attached or off one of its children.": {
+        "prefix": [
+            "jsMouseOutEvent",
+            "mouseout",
+            "!mouseout"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"mouseout\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : mouseout A pointing device is moved off the element that has the listener attached or off one of its children."
+    },
+    "listen to event : mouseover A pointing device is moved onto the element that has the listener attached or onto one of its children.": {
+        "prefix": [
+            "jsMouseOverEvent",
+            "mouseover",
+            "!mouseover"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"mouseover\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : mouseover A pointing device is moved onto the element that has the listener attached or onto one of its children."
+    },
+    "listen to event : mouseup A pointing device button is released over an element.": {
+        "prefix": [
+            "jsMouseUpEvent",
+            "mouseup",
+            "!mouseup"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"mouseup\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : mouseup A pointing device button is released over an element."
+    },
+    "listen to event : paste The item from the clipboard has been pasted": {
+        "prefix": [
+            "jsPasteEvent",
+            "paste",
+            "!paste"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"paste\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : paste The item from the clipboard has been pasted"
+    },
+    "listen to event : pause Playback has been paused.": {
+        "prefix": [
+            "jsPauseEvent",
+            "pause",
+            "!pause"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"pause\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pause Playback has been paused."
+    },
+    "listen to event : play Playback has begun.": {
+        "prefix": [
+            "jsPlayEvent",
+            "play",
+            "!play"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"play\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : play Playback has begun."
+    },
+    "listen to event : playing Playback is ready to start after having been paused or delayed due to lack of data.": {
+        "prefix": [
+            "jsPlayingEvent",
+            "playing",
+            "!playing"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"playing\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : playing Playback is ready to start after having been paused or delayed due to lack of data."
+    },
+    "listen to event : pointerlockchange The pointer was locked or released.": {
+        "prefix": [
+            "jsPointerLockChangeEvent",
+            "pointerlockchange",
+            "!pointerlockchange"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"pointerlockchange\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointerlockchange The pointer was locked or released."
+    },
+    "listen to event : pointerlockerror It was impossible to lock the pointer for technical reasons or because the permission was denied.": {
+        "prefix": [
+            "jsPointerLockErrorEvent",
+            "pointerlockerror",
+            "!pointerlockerror"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"pointerlockerror\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : pointerlockerror It was impossible to lock the pointer for technical reasons or because the permission was denied."
+    },
+    "listen to event : progress In progress.": {
+        "prefix": [
+            "jsProgressEvent",
+            "progress",
+            "!progress"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"progress\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : progress In progress."
+    },
+    "listen to event : ratechange The playback rate has changed.": {
+        "prefix": [
+            "jsRateChangeEvent",
+            "ratechange",
+            "!ratechange"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"ratechange\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : ratechange The playback rate has changed."
+    },
+    "listen to event : reset The reset button is pressed": {
+        "prefix": [
+            "jsResetEvent",
+            "reset",
+            "!reset"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"reset\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : reset The reset button is pressed"
+    },
+    "listen to event : resize The document view has been resized.": {
+        "prefix": [
+            "jsResizeEvent",
+            "resize",
+            "!resize"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"resize\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : resize The document view has been resized."
+    },
+    "listen to event : scroll The document view or an element has been scrolled.": {
+        "prefix": [
+            "jsScrollEvent",
+            "scroll",
+            "!scroll"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"scroll\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : scroll The document view or an element has been scrolled."
+    },
+    "listen to event : seeked A seek operation completed.": {
+        "prefix": [
+            "jsSeekedEvent",
+            "seeked",
+            "!seeked"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"seeked\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : seeked A seek operation completed."
+    },
+    "listen to event : seeking A seek operation began.": {
+        "prefix": [
+            "jsSeekingEvent",
+            "seeking",
+            "!seeking"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"seeking\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : seeking A seek operation began."
+    },
+    "listen to event : select Some text is being selected.": {
+        "prefix": [
+            "jsSelectEvent",
+            "select",
+            "!select"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"select\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : select Some text is being selected."
+    },
+    "listen to event : stalled The user agent is trying to fetch media data,but data is unexpectedly not forthcoming.": {
+        "prefix": [
+            "jsStalledEvent",
+            "stalled",
+            "!stalled"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"stalled\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : stalled The user agent is trying to fetch media data,but data is unexpectedly not forthcoming."
+    },
+    "listen to event : submit The submit button is pressed": {
+        "prefix": [
+            "jsSubmitEvent",
+            "submit",
+            "!submit"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"submit\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : submit The submit button is pressed"
+    },
+    "listen to event : suspend Media data loading has been suspended.": {
+        "prefix": [
+            "jsSuspendEvent",
+            "suspend",
+            "!suspend"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"suspend\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : suspend Media data loading has been suspended."
+    },
+    "listen to event : timeout Progression is terminated due to preset time expiring.": {
+        "prefix": [
+            "jsTimeOutEvent",
+            "timeout",
+            "!timeout"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"timeout \",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : timeout Progression is terminated due to preset time expiring."
+    },
+    "listen to event : timeupdate The time indicated by the currentTime attribute has been updated.": {
+        "prefix": [
+            "jsTimeUpDateEvent",
+            "timeupdate",
+            "!timeupdate"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"timeupdate\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : timeupdate The time indicated by the currentTime attribute has been updated."
+    },
+    "listen to event : transitionend A CSS transition has completed.": {
+        "prefix": [
+            "jsTransitionEndEvent",
+            "transitionend",
+            "!transitionend"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"transitionend\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : transitionend A CSS transition has completed."
+    },
+    "listen to event : transitionrun A CSS transition has begun running (fired before any delay starts).": {
+        "prefix": [
+            "jsTransitionRunEvent",
+            "transitionrun",
+            "!transitionrun"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"transitionrun\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : transitionrun A CSS transition has begun running (fired before any delay starts)."
+    },
+    "listen to event : volumechange The volume has changed.": {
+        "prefix": [
+            "jsVolumeChangeEvent",
+            "volumechange",
+            "!volumechange"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"volumechange\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : volumechange The volume has changed."
+    },
+    "listen to event : waiting Playback has stopped because of a temporary lack of data.": {
+        "prefix": [
+            "jsWaitingEvent",
+            "waiting",
+            "!waiting"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"waiting\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : waiting Playback has stopped because of a temporary lack of data."
+    },
+    "listen to event : wheel A wheel button of a pointing device is rotated in any direction.": {
+        "prefix": [
+            "jsWheelEvent",
+            "wheel",
+            "!wheel"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"wheel\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": " listen to event : wheel A wheel button of a pointing device is rotated in any direction."
+    },
+    "listen to focus using .addEventListener": {
+        "prefix": [
+            "jsFocusEvent",
+            "focus",
+            "!focus"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"focus\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to focus using .addEventListener"
+    },
+    "listen to focus using .onfocus": {
+        "prefix": [
+            "jsOnFocusEvent",
+            "onfocus",
+            "!onfocus"
+        ],
+        "body": [
+            "${1:elemToListen}.onfocus  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "}"
+        ],
+        "description": "listen to focus using .onfocus"
+    },
+    "listen to focusin using .addEventListener": {
+        "prefix": [
+            "jsFocusInEvent",
+            "focusin",
+            "!fi"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"focusin\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to focusin using .addEventListener"
+    },
+    "listen to focusin using .onfocusin": {
+        "prefix": [
+            "jsOnFocusInEvent",
+            "onfocusin",
+            "!ofi"
+        ],
+        "body": [
+            "${1:elemToListen}.onfocusin = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "}"
+        ],
+        "description": "listen to focusin using .onfocusin"
+    },
+    "listen to focusout using .addEventListener": {
+        "prefix": [
+            "jsFocusOutEvent",
+            "focusout",
+            "!fo"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"focusout\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to focusout using .addEventListener"
+    },
+    "listen to focusout using .onfocusout": {
+        "prefix": [
+            "jsOnFocusOutEvent",
+            "onfocusout",
+            "!ofout"
+        ],
+        "body": [
+            "${1:elemToListen}.onfocusout  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "}"
+        ],
+        "description": "listen to focusout using .onfocusout"
+    },
+    "listen to if A WebSocket connection has been established. using .addEventListener": {
+        "prefix": [
+            "jsOpenEvent",
+            "open",
+            "!open"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"open\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to if A WebSocket connection has been established. using .addEventListener"
+    },
+    "listen to if A WebSocket connection has been established. using .onopen": {
+        "prefix": [
+            "jsOnOpenEvent",
+            "onopen",
+            "!oopen"
+        ],
+        "body": [
+            "${1:elemToListen}.onopen  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "}"
+        ],
+        "description": "listen to if A WebSocket connection has been established. using .onopen"
+    },
+    "listen to if A message is received through a WebSocket. using .addEventListener": {
+        "prefix": [
+            "jsMessageEvent",
+            "message",
+            "!msg"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"message\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to if A message is received through a WebSocket. using .addEventListener"
+    },
+    "listen to if A message is received through a WebSocket. using .onmessage": {
+        "prefix": [
+            "jsOnMessageEvent",
+            "onmessage",
+            "!omsg"
+        ],
+        "body": [
+            "${1:elemToListen}.onmessage  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "}"
+        ],
+        "description": "listen to if A message is received through a WebSocket. using .onmessage"
+    },
+    "listen to keydown using .addEventListener": {
+        "prefix": [
+            "jsKeyDownEvent",
+            "keydown",
+            "!kd"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"keydown\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to keydown using .addEventListener"
+    },
+    "listen to keydown using .onkeydown": {
+        "prefix": [
+            "jsOnKeyDownEvent",
+            "onkeydown",
+            "!okd"
+        ],
+        "body": [
+            "${1:elemToListen}.onkeydown = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "}"
+        ],
+        "description": "listen to keydown using .onkeydown"
+    },
+    "listen to keypress using .addEventListener": {
+        "prefix": [
+            "jsKeyPressEvent",
+            "keypress",
+            "!kp"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"keypress\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to keypress using .addEventListener"
+    },
+    "listen to keypress using .onkeypress": {
+        "prefix": [
+            "jsOnKeyPressEvent",
+            "onkeypress",
+            "!okp"
+        ],
+        "body": [
+            "${1:elemToListen}.onkeypress  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "}"
+        ],
+        "description": "listen to keypress using .onkeypress"
+    },
+    "listen to keyup using .addEventListener": {
+        "prefix": [
+            "jsKeyUpEvent",
+            "keyup",
+            "!ku"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"keyup\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to keyup using .addEventListener"
+    },
+    "listen to keyup using .onkeyup": {
+        "prefix": [
+            "jsOnKeyUpEvent",
+            "onkeyup",
+            "!oku"
+        ],
+        "body": [
+            "${1:elemToListen}.onkeyup  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "}"
+        ],
+        "description": "listen to keyup using .onkeyup"
+    },
+    "listen to load using .addEventListener": {
+        "prefix": [
+            "jsLoadEvent",
+            "load",
+            "!l"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"load\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to load using .addEventListener"
+    },
+    "listen to load using .onload": {
+        "prefix": [
+            "jsOnLoadEvent",
+            "onload",
+            "!ol"
+        ],
+        "body": [
+            "${1:elemToListen}.onload  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "}"
+        ],
+        "description": "listen to load using .onload"
+    },
+    "listen to loadend using .addEventListener": {
+        "prefix": [
+            "jsLoadEndEvent",
+            "loadend",
+            "!le"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"loadend\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to loadend using .addEventListener"
+    },
+    "listen to loadend using .onloadend": {
+        "prefix": [
+            "jsOnLoadEndEvent",
+            "onloadend",
+            "!ole"
+        ],
+        "body": [
+            "${1:elemToListen}.onloadend  = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "}"
+        ],
+        "description": "listen to loadend using .onloadend"
+    },
+    "listen to mouseenter using .addEventListener": {
+        "prefix": [
+            "jsMouseEnterEvent",
+            "mouseenter",
+            "!me"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"mouseenter\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "})"
+        ],
+        "description": "listen to mouseenter using .addEventListener"
+    },
+    "listen to mouseenter using .onmouseenter": {
+        "prefix": [
+            "jsOnMouseEnterEvent",
+            "onmouseenter",
+            "!ome"
+        ],
+        "body": [
+            "${1:elemToListen}.onmouseenter = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault()",
+            "  $0",
+            "}"
+        ],
+        "description": "listen to mouseenter using .onmouseenter"
+    },
+    "listen to offline using .addEventListener": {
+        "prefix": [
+            "jsOfflineEvent",
+            "offline",
+            "!off"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"offline\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "  $0",
+            "})"
+        ],
+        "description": "listen to offline using .addEventListener"
+    },
+    "listen to offline using .onoffline": {
+        "prefix": [
+            "jsOnOfflineEvent",
+            "onoffline",
+            "!onoffline"
+        ],
+        "body": [
+            "${1:window}.onoffline = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault()",
+            "  $0",
+            "}"
+        ],
+        "description": "listen to offline using .onoffline"
+    },
+    "listen to online using .addEventListener": {
+        "prefix": [
+            "jsOnlineEvent",
+            "online",
+            "!online"
+        ],
+        "body": [
+            "${1:window}.addEventListener(\"online\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "  $0",
+            "})"
+        ],
+        "description": "listen to online using .addEventListener"
+    },
+    "listen to online using .ononline": {
+        "prefix": [
+            "jsOnOnlineEvent",
+            "ononline",
+            "!ononline"
+        ],
+        "body": [
+            "${1:window}.ononline = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault()",
+            "  $0",
+            "}"
+        ],
+        "description": "listen to online using .ononline"
+    },
+    "listen to unload using .addEventListener": {
+        "prefix": [
+            "jsUnloadEvent",
+            "unload",
+            "!unload"
+        ],
+        "body": [
+            "${1:elemToListen}.addEventListener(\"unload\",(${2:e}) => ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "  $0",
+            "})"
+        ],
+        "description": "listen to unload using .addEventListener"
+    },
+    "listen to unload using .onunload": {
+        "prefix": [
+            "jsOnUnloadEvent",
+            "onunload",
+            "!onunload"
+        ],
+        "body": [
+            "${1:elemToListen}.onunload = function(${2:e}) ",
+            "{ ",
+            "  ${2}.preventDefault() ",
+            "  $0",
+            "}"
+        ],
+        "description": "listen to unload using .onunload"
+    },
+    "localeCompare": {
+        "prefix": [
+            "jsLocaleCompare",
+            "localeCompare",
+            "!localeCompare"
+        ],
+        "body": [
+            "${1:str1}.localeCompare(${2:str2})"
+        ],
+        "description": "localeCompare"
+    },
+    "match": {
+        "prefix": [
+            "jsMatch",
+            "match",
+            "!match"
+        ],
+        "body": [
+            "${1:str1}.match(${2:regx})"
+        ],
+        "description": "match"
+    },
+    "network requests with Ajax": {
+        "prefix": [
+            "jsFetch",
+            "fetch",
+            "ajax.fetch",
+            "!fetch"
+        ],
+        "body": [
+            "fetch(\"data.json\")",
+            "  .then(data => {",
+            "    ${1:// Handle data}",
+            "  }).catch(error => {",
+            "    ${2:// Handle error}",
+            "  })"
+        ],
+        "description": "network requests with Ajax"
+    },
+    "parseFloat function": {
+        "prefix": [
+            "jsParseFloat",
+            "parseFloat",
+            "floatParse",
+            "!parseFloat"
+        ],
+        "body": [
+            "parseFloat(${1:value})"
+        ],
+        "description": "parseFloat function"
+    },
+    "parseInt function": {
+        "prefix": [
+            "jsParseInt",
+            "parseInt",
+            "intParse",
+            "!parseInt"
+        ],
+        "body": [
+            "parseInt(${1:value})"
+        ],
+        "description": "parseInt function"
+    },
+    "remove Class": {
+        "prefix": [
+            "jsRemoveClass",
+            "removeClass",
+            "classRemove",
+            "!remove"
+        ],
+        "body": [
+            "${1:variable}.classList.remove('${2:classe}')"
+        ],
+        "description": "remove Class"
+    },
+    "replace Class": {
+        "prefix": [
+            "jsReplaceClass",
+            "replaceClass",
+            "classReplace",
+            "!replace"
+        ],
+        "body": [
+            "${1:variable}.classList.replace(\"${2:firstClas}\",\"${3:secondeClass}\")"
+        ],
+        "description": "replace Class"
+    },
+    "send Get Ajax call": {
+        "prefix": [
+            "jsGet",
+            "get",
+            "ajax.get",
+            "!get"
+        ],
+        "body": [
+            "${1|let,var,const|} xhr = new XMLHttpRequest()",
+            "  xhr.onreadystatechange = function() {",
+            "    if (this.readyState == 4 && this.status == 200) {",
+            "     ${4:// do your code}",
+            "    }",
+            "  }",
+            " xhr.open(\"GET\",\"${2:URL}\",${3|true,false|})",
+            " xhr.send()"
+        ],
+        "description": "send Get Ajax call"
+    },
+    "send Post Ajax call": {
+        "prefix": [
+            "jsPost",
+            "post",
+            "ajax.post",
+            "!post"
+        ],
+        "body": [
+            "${1|let,var,const|} xhr = new XMLHttpRequest()",
+            "  xhr.onreadystatechange = function() {",
+            "    if (this.readyState == 4 && this.status == 200) {",
+            "     ${5:// do your code}",
+            "    }",
+            "  }",
+            " xhr.open(\"POST\",\"${2:URL}\",${3|true,false|})",
+            " xhr.send(${4:DATA})"
+        ],
+        "description": "send Post Ajax call"
+    },
+    "setter": {
+        "prefix": [
+            "jsSetter",
+            "setter",
+            "set",
+            "!set"
+        ],
+        "body": [
+            "set ${1:wantedElem}(${2:value}) {",
+            "",
+            "}"
+        ],
+        "description": "setter"
+    },
+    "show an element by changing \"display\" to  block": {
+        "prefix": [
+            "jsShow",
+            "show",
+            "block",
+            "dislay",
+            "!show"
+        ],
+        "body": [
+            "${1:variable}.style.display = \"block\""
+        ],
+        "description": "show an element by changing \"display\" to  block"
+    },
+    "startsWith": {
+        "prefix": [
+            "jsStartsWith",
+            "startsWith",
+            "!startsWith"
+        ],
+        "body": [
+            "${1:str}.startsWith(${2:value})"
+        ],
+        "description": "startsWith"
+    },
+    "str.charAt(0)": {
+        "prefix": [
+            "jsCharAt",
+            "chartAt",
+            "!chartAt"
+        ],
+        "body": [
+            "${1:str}.charAt(${2:index})"
+        ],
+        "description": "str.charAt(0)"
+    },
+    "str.charCodeAt(0)": {
+        "prefix": [
+            "jsCharCodeAt",
+            "charCodeAt",
+            "codeAt",
+            "!codeAt"
+        ],
+        "body": [
+            "${1:str}.charCodeAt(${2:index})"
+        ],
+        "description": "str.charCodeAt(0)"
+    },
+    "str.endsWith()": {
+        "prefix": [
+            "jsEndsWith",
+            "endsWith",
+            "!endW"
+        ],
+        "body": [
+            "${1:str}.endsWith(${2:value})"
+        ],
+        "description": "str.endsWith()"
+    },
+    "substr": {
+        "prefix": [
+            "jsSubStr",
+            "substr",
+            "!sstr"
+        ],
+        "body": [
+            "${1:str}.substr(${2:start},${3:end})"
+        ],
+        "description": "substr"
+    },
+    "substring": {
+        "prefix": [
+            "jsSubstring",
+            "substring",
+            "subS",
+            "!ss"
+        ],
+        "body": [
+            "${1:str}.substring(${2:start},${3:end})"
+        ],
+        "description": "substring"
+    },
+    "throw ": {
+        "prefix": [
+            "jsThrow",
+            "throw",
+            "!throw"
+        ],
+        "body": [
+            "throw new Error('${1:ERRORMSG}')"
+        ],
+        "description": "throw "
+    },
+    "toFixed": {
+        "prefix": [
+            "jsToFixed",
+            "tofixed",
+            "fixed",
+            "!fixed"
+        ],
+        "body": [
+            "${1:valueNumber}.toFixed(${2:count})"
+        ],
+        "description": "toFixed"
+    },
+    "toLocaleString": {
+        "prefix": [
+            "jsToLocaleString",
+            "toLocaleString",
+            "!localeString"
+        ],
+        "body": [
+            "new Date(${1:Date.UTC(2012, 11, 20, 3, 0, 0)}).toLocaleString(\"${2|en-US,en-GB,fr-FR,de-DE|}\",{ timeZone: '${3|UTC,America/New_York|}' })"
+        ],
+        "description": "toLocaleString"
+    },
+    "toLowerCase": {
+        "prefix": [
+            "jsToLowerCase",
+            "toLowerCase",
+            "lowerCase",
+            "!lowerCase"
+        ],
+        "body": [
+            "${1:str}.toLowerCase()"
+        ],
+        "description": "toLowerCase"
+    },
+    "toPrecision": {
+        "prefix": [
+            "jsToPrecision",
+            "toPrecision",
+            "!precision"
+        ],
+        "body": [
+            "${1:number}.toPrecision(${2:count})"
+        ],
+        "description": "toPrecision"
+    },
+    "toUpperCase": {
+        "prefix": [
+            "jsToUpperCase",
+            "toUpperCase",
+            "toUpper",
+            "upper",
+            "!upper"
+        ],
+        "body": [
+            "${1:str}.toUpperCase()"
+        ],
+        "description": "toUpperCase"
+    },
+    "toggle Class": {
+        "prefix": [
+            "jsToggleClass",
+            "toggle",
+            "toggleClass",
+            "!toggle"
+        ],
+        "body": [
+            "${1:variable}.classList.toggle('${2:classe}')"
+        ],
+        "description": "toggle Class"
+    },
+    "trim": {
+        "prefix": [
+            "jsTirm",
+            "tirm",
+            "!tirm"
+        ],
+        "body": [
+            "${1:str}.trim()"
+        ],
+        "description": "trim"
+    },
+    "try catch": {
+        "prefix": [
+            "jsTryCatch",
+            "tryCatch",
+            "!tryCatch"
+        ],
+        "body": [
+            "try {",
+            "  ${1://code}",
+            "}",
+            "catch(err) {",
+            "  err.name + \"<br>\" + err.message",
+            "}"
+        ],
+        "description": "try catch"
+    },
+    "update the htmlcontent for an element innerHTML": {
+        "prefix": [
+            "jsHtml",
+            "html",
+            "!html",
+            "innerHtml",
+            "inner"
+        ],
+        "body": [
+            "${1:variable}.innerHTML=\"${2:html}\""
+        ],
+        "description": "update the htmlcontent for an element innerHTML"
+    },
+    "update the text content for an element textContent ": {
+        "prefix": [
+            "jsText",
+            "!text",
+            "textContent",
+            "getText"
+        ],
+        "body": [
+            "${1:variable}.textContent = \"${2:text}\""
+        ],
+        "description": "update the text content for an element textContent "
+    },
+    "use .style in JavaScript and assign values to its different properties to achieve the same effect:": {
+        "prefix": [
+            "jsStyle",
+            "style",
+            "addStyle",
+            "!style"
+        ],
+        "body": [
+            "${1:variable}.style.${2|color,background,backgroundColor,width,height,top,bottom,left,right,margin,marginTop,marginRight,marginLeft,marginBottom,padding,paddingTop,paddingRight,paddingLeft,paddingBottom|}= \"${3:value}\""
+        ],
+        "description": "use .style in JavaScript and assign values to its different properties to achieve the same effect:"
+    },
+    "while loop": {
+        "prefix": [
+            "jsWhile",
+            "while",
+            "wloop",
+            "loopw",
+            "!w"
+        ],
+        "body": [
+            "while (${1:conditions}) {",
+            "  $2  ",
+            "}"
+        ],
+        "description": "while loop"
+    },
+    "import new": {
+        "prefix": "imp",
+        "body": "import ${2:moduleName} from '${1:module}';$0",
+        "description": "Imports entire module statement in ES6 syntax"
+    },
+    "importNoModuleName": {
+        "prefix": "imn",
+        "body": "import '${1:module}';$0",
+        "description": "Imports entire module in ES6 syntax without module name"
+    },
+    "importDestructing": {
+        "prefix": "imd",
+        "body": "import { $2 } from '${1:module}';$0",
+        "description": "Imports only a portion of the module in ES6 syntax"
+    },
+    "importEverything": {
+        "prefix": "ime",
+        "body": "import * as ${2:alias} from '${1:module}';$0",
+        "description": "Imports everything as alias from the module in ES6 syntax"
+    },
+    "importAs": {
+        "prefix": "ima",
+        "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0",
+        "description": "Imports a specific portion of the module by assigning a local alias in ES6 syntax"
+    },
+    "require": {
+        "prefix": "rqr",
+        "body": "require('${1:package}');",
+        "description": "Require a package"
+    },
+    "requireToConst": {
+        "prefix": "req",
+        "body": "const ${1:packageName} = require('${1:package}');$0",
+        "description": "Require a package to const"
+    },
+    "moduleExports": {
+        "prefix": "mde",
+        "body": "module.exports = {\n\t$0\n};\n",
+        "description": "Module exports from Common JS, node syntax at ES6"
+    },
+    "exportNamedVariable": {
+        "prefix": "env",
+        "body": "export const ${1:exportVariable} = ${2:localVariable};\n",
+        "description": "Export named variable in ES6 syntax"
+    },
+    "exportNamedFunction": {
+        "prefix": "enf",
+        "body": "export const ${1:functionName} = (${2:params}) => {\n\t$0\n};\n",
+        "description": "Export named function in ES6 syntax"
+    },
+    "exportDefaultFunction": {
+        "prefix": "edf",
+        "body": "export default function ${1:${TM_FILENAME_BASE}}(${2:params}) {\n\t$0\n};\n",
+        "description": "Export default function in ES6 syntax"
+    },
+    "exportClass": {
+        "prefix": "ecl",
+        "body": "export default class ${1:className} {\n\t$0\n};\n",
+        "description": "Export default class in ES6 syntax"
+    },
+    "exportClassExtends": {
+        "prefix": "ece",
+        "body": "export default class ${1:className} extends ${2:baseclassName} {\n\t$0\n};\n",
+        "description": "Export default class which extends a base one in ES6 syntax"
+    },
+    "constructor": {
+        "prefix": "con",
+        "body": "constructor(${1:params}) {\n\t${0}\n}",
+        "description": "Add default constructor in a class in ES6 syntax"
+    },
+    "method": {
+        "prefix": "met",
+        "body": "${1:methodName}(${2:params}) {\n\t${0}\n}",
+        "description": "Creates a method inside a class in ES6 syntax"
+    },
+    "propertyGet": {
+        "prefix": "pge",
+        "body": "get ${1:propertyName}() {\n\treturn this.${0};\n}",
+        "description": "Creates a getter property inside a class in ES6 syntax"
+    },
+    "propertyset": {
+        "prefix": "pse",
+        "body": "set ${1:propertyName}(${2:value}) {\n\t${0};\n}",
+        "description": "Creates a setter property inside a class in ES6 syntax"
+    },
+    "forEach": {
+        "prefix": "fre",
+        "body": "${1:array}.forEach(${2:currentItem} => {\n\t${0}\n});",
+        "description": "Creates a forEach statement in ES6 syntax"
+    },
+    "forOf": {
+        "prefix": "fof",
+        "body": "for (const ${1:item} of ${2:object}) {\n\t${0}\n}",
+        "description": "Iterating over property names of iterable objects"
+    },
+    "forIn": {
+        "prefix": "fin",
+        "body": "for (const ${1:item} in ${2:object}) {\n\t${0}\n}",
+        "description": "Iterating over property values of iterable objects"
+    },
+    "anonymousFunction": {
+        "prefix": "anfn",
+        "body": "(${1:params}) => {\n\t${2}\n}",
+        "description": "Creates an anonymous function in ES6 syntax"
+    },
+    "namedFunction": {
+        "prefix": "nfn",
+        "body": "const ${1:name} = (${2:params}) => {\n\t${3}\n}",
+        "description": "Creates a named function in ES6 syntax"
+    },
+    "destructingObject": {
+        "prefix": "dob",
+        "body": "const {${2:propertyName}} = ${1:objectToDestruct};",
+        "description": "Creates and assigns a local variable using object destructing"
+    },
+    "destructingArray": {
+        "prefix": "dar",
+        "body": "const [${2:propertyName}] = ${1:arrayToDestruct};",
+        "description": "Creates and assigns a local variable using array destructing"
+    },
+    "setInterval": {
+        "prefix": "sti",
+        "body": "setInterval(() => {\n\t${2}\n}, ${0:intervalInms});",
+        "description": "Executes the given function at specified intervals in ES6 syntax"
+    },
+    "setTimeOut": {
+        "prefix": "sto",
+        "body": "setTimeout(() => {\n\t${2}\n}, ${1:delayInms});",
+        "description": "Executes the given function after the specified delay in ES6 syntax"
+    },
+    "promise": {
+        "prefix": "prom",
+        "body": "return new Promise((resolve, reject) => {\n\t${1}\n});",
+        "description": "Creates and returns a new Promise in the standard ES6 syntax"
+    },
+    "thenCatch": {
+        "prefix": "thenc",
+        "body": ".then((${1:result}) => {\n\t${2}\n}).catch((${3:err}) => {\n\t${4}\n});",
+        "description": "Add the .then and .catch methods to handle promises"
+    },
+    "consoleAssert": {
+        "prefix": "cas",
+        "body": "console.assert(${1:expression}, ${2:object});",
+        "description": "If the specified expression is false, the message is written to the console along with a stack trace"
+    },
+    "consoleClear": {
+        "prefix": "ccl",
+        "body": "console.clear();",
+        "description": "Clears the console"
+    },
+    "consoleCount": {
+        "prefix": "cco",
+        "body": "console.count(${1:label});",
+        "description": "Writes the the number of times that count() has been invoked at the same line and with the same label"
+    },
+    "consoleDebug": {
+        "prefix": "cdb",
+        "body": "console.debug(${1:object});",
+        "description": "Displays a message in the console. Also display a blue right arrow icon along with the logged message in Safari"
+    },
+    "consoleDir": {
+        "prefix": "cdi",
+        "body": "console.dir(${1:object});",
+        "description": "Prints a JavaScript representation of the specified object"
+    },
+    "consoleError": {
+        "prefix": "cer",
+        "body": "console.error(${1:object});",
+        "description": "Displays a message in the console and also includes a stack trace from where the method was called"
+    },
+    "consoleGroup": {
+        "prefix": "cgr",
+        "body": "console.group('${1:label}');",
+        "description": "Groups and indents all following output by an additional level, until console.groupEnd() is called."
+    },
+    "consoleGroupEnd": {
+        "prefix": "cge",
+        "body": "console.groupEnd();",
+        "description": "Closes out the corresponding console.group()."
+    },
+    "consoleLog": {
+        "prefix": "clg",
+        "body": "console.log(${1:object});",
+        "description": "Displays a message in the console"
+    },
+    "consoleLogObject": {
+        "prefix": "clo",
+        "body": "console.log('${1:object} :>> ', ${1:object});",
+        "description": "Displays an object in the console with its name"
+    },
+    "consoleTrace": {
+        "prefix": "ctr",
+        "body": "console.trace(${1:object});",
+        "description": "Prints a stack trace from the point where the method was called"
+    },
+    "consoleWarn": {
+        "prefix": "cwa",
+        "body": "console.warn(${1:object});",
+        "description": "Displays a message in the console but also displays a yellow warning icon along with the logged message"
+    },
+    "consoleInfo": {
+        "prefix": "cin",
+        "body": "console.info(${1:object});",
+        "description": "Displays a message in the console but also displays a blue information icon along with the logged message"
+    },
+    "consoleTable": {
+        "prefix": "clt",
+        "body": "console.table(${1:object});",
+        "description": "Displays tabular data as a table."
+    },
+    "consoleTime": {
+        "prefix": "cti",
+        "body": "console.time(${1:object});",
+        "description": "Sets starting point for execution time measurement"
+    },
+    "consoleTimeEnd": {
+        "prefix": "cte",
+        "body": "console.timeEnd(${1:object});",
+        "description": "Sets end point for execution time measurement"
+    }
+}
