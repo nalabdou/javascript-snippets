@@ -23,4 +23,4 @@ Give a ⭐️ if this project helped you !
 
 ## 📝 License
 Copyright © 2020 [Nadim Al Abdou](https://linkedin.com/in/nalabdou).<br />
-This project is [GPL3](https://github.com/nalabdou/Symfony-code-snippets/blob/master/LICENSE) licensed.
+This project is [GPL3](https://github.com/nalabdou/javascript-snippets/blob/master/LICENSE) licensed.
