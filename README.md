@@ -1,4 +1,4 @@
-##  javaScript Code Snippets
+##  JavaScript Code Snippets
 
 This extension contains over 400 code snippets for JavaScript, supports JavaScript and html & php files.
 <hr>
